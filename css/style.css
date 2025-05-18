@@ -1,0 +1,72 @@
+section{
+  height: 100vh;
+  width: auto;
+}
+section:nth-child(even){
+  background-color: aliceblue;
+}
+section:nth-child(odd){
+  background-color: lightblue;
+}
+.home{
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  align-content: start;
+}
+
+.home .item:nth-child(1) {
+  width: 100%;
+  height: 10vh;
+  background-color: #bb6363; /* Light gray background */
+}
+
+.home .item:nth-child(2) {
+  flex-grow: 1;
+  height: 90vh;
+  background-color: #794e42; /* Light pink background */
+}
+
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  flex-direction: row-reverse;
+}
+
+.detail .item:nth-child(1) {
+  width: 60%;
+  height: 100vh;
+  background-color: #a87777;
+}
+
+.detail .item:nth-child(2) {
+  flex-grow: 1;
+  height: 100vh;
+  background-color: #ffffff;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  flex-direction: row;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.item:nth-child(1),
+.item:nth-child(4) {
+  width: 100%;
+  height: 10vh;
+  
+}
+
+.item:nth-child(2) {
+  width: 25%;
+  height: 80vh;
+}
+
+.item:nth-child(3) {
+  flex-grow: 1;
+  height: 80vh;
+}
