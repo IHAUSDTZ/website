@@ -5,7 +5,7 @@
 }
 body {
   color: rgb(255, 255, 255);
-  background: black;
+  background: rgb(0, 0, 0);
   overflow-x: hidden;
   font-family: "Times New Roman", Times, serif, sans-serif;
 }
@@ -74,15 +74,15 @@ nav ul li a.active {
   left: 5%;
 }
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .gallery img {
   width: 100%;
   max-width: 200px;
-  height: auto;
+  height: 150px;
   object-fit: cover;
   cursor: pointer;
   border-radius: 5px;
@@ -207,8 +207,10 @@ nav ul li a.active {
   position: relative;
   top: 10vh;
   border-radius: 50%;
+  box-shadow: #1aff53 0px 0px 50px;
 }
 .detail .createDetail {
+  color: #1aff53;
   position: relative;
   top: 10vh;
   left: 10%;
@@ -216,12 +218,12 @@ nav ul li a.active {
   height: 40vh;
 }
 .detail .aim {
+  color: #1aff53;
   width: 90%;
   height: 50vh;
   position: relative;
   top: 5vh;
   left: 5%;
-  background: blue;
 }
 #gallery h1 {
   width: fit-content;
@@ -248,7 +250,7 @@ nav ul li a.active {
   text-transform: uppercase;
 }
 #services h1 {
-  width: fit-content;
+  width: 10%;
   position: relative;
   top: 50%;
   left: -4%;
@@ -258,4 +260,175 @@ nav ul li a.active {
   font-weight: 600;
   color: #1aff53;
   text-transform: uppercase;
+}
+.serContent {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+.serContent .proposal {
+  width: 45%;
+}
+.serContent .work {
+  flex-grow: 1;
+}
+
+.serContent h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1aff53;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+  top: 7vh;
+}
+.serContent p {
+  font-size: 1.5rem;
+  width: 100%;
+  color: #1aff53;
+  position: relative;
+  position: relative;
+  top: 10vh;
+  left: 3%;
+}
+.serContent .pdf {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  top: 15vh;
+  left: 0%;
+}
+.serContent li {
+  list-style: none;
+}
+.serContent a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  width: 80%;
+  color: #1aff53;
+  margin: 8px;
+  margin-bottom: 5%;
+  padding: 7px;
+  box-shadow: 0 2px 6px #1aff53;
+}
+.serContent a:hover {
+  background: #24472d;
+  color: #fff;
+  width: 80%;
+  height: 100%;
+}
+#contact .uper {
+  position: relative;
+  top: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+.getInTouch {
+  width: 40%;
+  height: 40vh;
+  border-radius: 10px;
+}
+.getInTouch h2 {
+  color: #1aff53;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.getInTouch input,
+.getInTouch textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+}
+.getInTouch button {
+  padding: 0.75rem 1.5rem;
+  background-color: #1aff53;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.socialMedia {
+  flex-grow: 1;
+  height: 40vh;
+}
+.socialMedia ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  width: 100%;
+  height: 40vh;
+}
+.socialMedia h2 {
+  color: #1aff53;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.socialMedia ul li {
+  list-style: none;
+  padding: 4%;
+  position: relative;
+  top: 20%;
+  left: 20%;
+  transition: transform 0.6s ease-in-out;
+}
+.socialMedia ul li a {
+  text-decoration: none;
+  color: #1aff53;
+  font-size: 40px;
+  box-shadow: #1aff53 0px 0px 10px;
+}
+.socialMedia ul li:hover {
+  transform: scale(2);
+  transition: transform 0.2s ease-out;
+}
+.socialMedia ul li a:hover {
+  color: #1aff53;
+  box-shadow: #1aff53 0px 0px 20px;
+  cursor: pointer;
+  text-shadow: #1aff53 0px 0px 10px;
+}
+.contactContent hr {
+  position: relative;
+  top: 0vh;
+  width: 100%;
+  height: 1px;
+  background: #1aff53;
+}
+.lower {
+  width: 100%;
+  height: 50vh;
+}
+.lower .lo {
+  padding-top: 2%;
+  margin-left: 1%;
+  margin-right: 2%;
+  width: 30%;
+  height: 50vh;
+  float: left;
+}
+.lower h2 {
+  color: #1aff53;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.lower ul {
+  width: 100%;
+  height: 100%;
+}
+.lower ul li {
+  list-style: none;
+  padding: 1%;
+  text-align: center;
+  color: #1aff53;
+  font-size: 20px;
+  font-weight: 600;
 }

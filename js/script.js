@@ -102,3 +102,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // Start animation
   type();
 });
+emailjs.init("0-ouIQjL3fE5Qiv6S");
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_6fc2fre", "template_wnswain", this)
+      .then(() => {
+        alert("Message sent successfully!");
+        this.reset();
+      })
+      .catch((error) => {
+        alert("Failed to send message. Error: " + error.text);
+      });
+  });
