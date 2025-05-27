@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
 </head>
 
 <body>
@@ -78,7 +76,7 @@
             </li>
           </ol>
         </div>
-        <button><a href="pdf/About the Organization.docx">Read More</a></button>
+        <button><a href="pdf/About the Organization.pdf">Read More</a></button>
       </div>
 
     </div>
@@ -90,7 +88,8 @@
         <h2>Proposal</h2>
         <p>This are some of the proposal</p>
         <div class="pdf">
-          <li><a href="pdf/350KB.pdf">pdf1</a></li>
+          <li><a href="pdf/Concept Note.pdf">Submission of Concept Note for the Beautification of Khoupum Valley</a>
+          </li>
           <li><a href="pdf/Free_Test_Data_100KB_PDF.pdf">pdf1</a></li>
           <li><a href="pdf/Free_Test_Data_1MB_PDF.pdf">pdf1</a></li>
           <li><a href="pdf/Free_Test_Data_500KB_PDF.pdf">pdf1</a></li>
@@ -101,7 +100,8 @@
         <h2>Our Work Done</h2>
         <p>This are some of the work we have done</p>
         <div class="pdf">
-          <li><a href="pdf/350KB.pdf">pdf1</a></li>
+          <li><a href="pdf/Village level Geo-economic.pdf">Village level Geo-economic Development through Sustainable
+              farming</a></li>
           <li><a href="pdf/Free_Test_Data_100KB_PDF.pdf">pdf1</a></li>
           <li><a href="pdf/Free_Test_Data_1MB_PDF.pdf">pdf1</a></li>
           <li><a href="pdf/Free_Test_Data_500KB_PDF.pdf">pdf1</a></li>
@@ -129,11 +129,47 @@
         <div class="getInTouch">
           <h2>Get in Touch</h2>
           <form id="contact-form">
-            <input type="email" name="user_email" placeholder="Your Email" required />
-            <input type="text" name="subject" placeholder="Subject" required />
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="text" name="title" placeholder="Subject" required />
             <textarea name="message" placeholder="Your Message" required></textarea>
+
+            <!-- Optional time field -->
+            <input type="hidden" name="time" id="form-time" />
+
             <button type="submit">Send</button>
           </form>
+
+          <!-- Load EmailJS SDK -->
+          <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+          <script>
+            // Initialize EmailJS with your Public Key
+            (function () {
+              emailjs.init("6NMbf23hFLlnvZBSH"); // Replace with your actual public key
+            })();
+
+            // Handle form submission
+            document
+              .getElementById("contact-form")
+              .addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                // Set the current timestamp in hidden field
+                document.getElementById("form-time").value = new Date().toLocaleString();
+
+                emailjs.sendForm("service_ps5at9j", "template_vh4kfll", this).then(
+                  () => {
+                    alert("Message sent successfully!");
+                    this.reset(); // optional: clear form
+                  },
+                  (error) => {
+                    alert("Failed to send message: " + error.text);
+                  }
+                );
+              });
+
+          </script>
         </div>
         <div class="socialMedia">
 

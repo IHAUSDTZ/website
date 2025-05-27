@@ -51,11 +51,11 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: #1aff53;
+  color: #ffffff;
   transition: color 0.3s, background-color 0.3s;
 }
 nav ul li a.active {
-  background-color: #1aff53;
+  background-color: #ffffff;
   color: rgb(0, 0, 0);
   border-radius: 20px;
   padding: 0.5rem 2rem;
@@ -134,7 +134,7 @@ nav ul li a.active {
 .close-btn:hover,
 .prev-btn:hover,
 .next-btn:hover {
-  color: #1aff53;
+  color: #ffffff;
 }
 .content {
   width: 60%;
@@ -143,7 +143,7 @@ nav ul li a.active {
 #home .text {
   font-size: 2rem;
   font-weight: 600;
-  color: #1aff53;
+  color: #ffffff;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0 1rem;
@@ -158,7 +158,7 @@ nav ul li a.active {
 }
 #home p {
   font-size: 1.2rem;
-  color: #1aff53;
+  color: #ffffff;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0 1rem;
@@ -191,7 +191,7 @@ nav ul li a.active {
   transform: rotate(90deg);
   font-size: 2rem;
   font-weight: 600;
-  color: #1aff53;
+  color: #ffffff;
   text-transform: uppercase;
 }
 .detail {
@@ -210,7 +210,7 @@ nav ul li a.active {
 }
 
 .detail .createDetail {
-  color: #1aff53;
+  color: #ffffff;
   position: relative;
   top: 10vh;
   left: 10%;
@@ -229,7 +229,7 @@ nav ul li a.active {
   flex-wrap: wrap;
   align-items: start;
   gap: 10px;
-  color: #1aff53;
+  color: #ffffff;
   width: 100%;
   height: 60vh;
   position: relative;
@@ -272,14 +272,14 @@ nav ul li a.active {
 .aim button a {
   width: 100%;
   text-decoration: none;
-  color: #1aff53;
+  color: #ffffff;
   font-size: 1.5rem;
 }
 .aim button:hover {
   background: transparent;
 }
 .aim button:hover a {
-  background-color: #1aff53;
+  background-color: #ffffff;
   color: rgb(0, 0, 0);
   padding: 0.5rem;
   display: inline-block;
@@ -293,7 +293,7 @@ nav ul li a.active {
   transform: rotate(90deg);
   font-size: 2rem;
   font-weight: 600;
-  color: #1aff53;
+  color: #ffffff;
   text-transform: uppercase;
 }
 #contact h1 {
@@ -305,7 +305,7 @@ nav ul li a.active {
   transform: rotate(90deg);
   font-size: 2rem;
   font-weight: 600;
-  color: #1aff53;
+  color: #ffffff;
   text-transform: uppercase;
 }
 #services h1 {
@@ -317,7 +317,7 @@ nav ul li a.active {
   transform: rotate(90deg);
   font-size: 2rem;
   font-weight: 600;
-  color: #1aff53;
+  color: #ffffff;
   text-transform: uppercase;
 }
 .serContent {
@@ -331,12 +331,13 @@ nav ul li a.active {
   width: 45%;
 }
 .serContent .work {
+  width: 45%;
   flex-grow: 1;
 }
 .serContent h2 {
   font-size: 2rem;
   font-weight: 600;
-  color: #1aff53;
+  color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   margin-top: 2rem;
@@ -346,7 +347,7 @@ nav ul li a.active {
 .serContent p {
   font-size: 1.5rem;
   width: 100%;
-  color: #1aff53;
+  color: #ffffff;
   position: relative;
   top: 10vh;
   left: 3%;
@@ -367,14 +368,14 @@ nav ul li a.active {
   font-weight: bold;
   display: block;
   width: 80%;
-  color: #1aff53;
+  color: #ffffff;
   margin: 8px;
   margin-bottom: 5%;
   padding: 7px;
-  box-shadow: 0 2px 6px #1aff53;
+  box-shadow: 0 2px 6px #ffffff;
 }
 .serContent a:hover {
-  background: #24472d;
+  background: #818682;
   color: #fff;
   width: 80%;
   height: 100%;
@@ -392,7 +393,7 @@ nav ul li a.active {
   border-radius: 10px;
 }
 .getInTouch h2 {
-  color: #1aff53;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -406,7 +407,7 @@ nav ul li a.active {
 }
 .getInTouch button {
   padding: 0.75rem 1.5rem;
-  background-color: #1aff53;
+  background-color: #ffffff;
   border: none;
   color: black;
   font-weight: bold;
@@ -425,7 +426,7 @@ nav ul li a.active {
   height: 40vh;
 }
 .socialMedia h2 {
-  color: #1aff53;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -439,26 +440,26 @@ nav ul li a.active {
 }
 .socialMedia ul li a {
   text-decoration: none;
-  color: #1aff53;
+  color: #ffffff;
   font-size: 40px;
-  box-shadow: #1aff53 0px 0px 10px;
+  box-shadow: #ffffff 0px 0px 10px;
 }
 .socialMedia ul li:hover {
   transform: scale(2);
   transition: transform 0.2s ease-out;
 }
 .socialMedia ul li a:hover {
-  color: #1aff53;
-  box-shadow: #1aff53 0px 0px 20px;
+  color: #ffffff;
+  box-shadow: #ffffff 0px 0px 20px;
   cursor: pointer;
-  text-shadow: #1aff53 0px 0px 10px;
+  text-shadow: #ffffff 0px 0px 10px;
 }
 .contactContent hr {
   position: relative;
   top: 0vh;
   width: 100%;
   height: 1px;
-  background: #1aff53;
+  background: #ffffff;
 }
 .lower {
   width: 100%;
@@ -473,7 +474,7 @@ nav ul li a.active {
   float: left;
 }
 .lower h2 {
-  color: #1aff53;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -485,7 +486,7 @@ nav ul li a.active {
   list-style: none;
   padding: 1%;
   text-align: center;
-  color: #1aff53;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 600;
 }
