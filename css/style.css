@@ -19,7 +19,7 @@ section {
   margin: 0;
   z-index: -100;
 }
-@media screen and (max-width: 450px){
+@media screen and (min-width: 300px){
   #home {
   display: flex;
   flex-wrap: wrap;
@@ -32,13 +32,14 @@ nav ul {
  display: none;
 }
 nav .logo img{
-  width: 80%;
+  width: 70%;
   height: 40vh;
   position: absolute;
-  left: 10%;
-  top: 15vh;
+  left: 50%;
+  top: 30vh;
+  transform: translate(-50%, -50%);
   z-index: -100;
-  border-radius: 200px;
+  border-radius: 50%;
   opacity: 1;
 }
 #home p {
@@ -81,12 +82,12 @@ nav .logo img{
   width: 100%;
   height: 100vh;
 }
-.detail .img img {
-  width: 100%;
+.deup img {
+  width: 20%;
   height: 10vh;
   position: relative;
   top: 10vh;
-  left: 140%;
+  left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
@@ -217,17 +218,15 @@ top: 2vh;
   position: relative;
 }
 .serContent .proposal {
-
   width: 100%;
   height: 35vh;
   position: relative;
-
 }
 .serContent .work {
   width: 100%;
   height: 35vh;
   position: relative;
-  top: -10vh;
+  top: 0vh;
 }
 .serContent h2 {
   font-size: 1rem;
@@ -472,29 +471,12 @@ top: 2vh;
   font-weight: 600;
 }
 }
-/* * {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-body {
-  color: rgb(255, 255, 255);
-  background: #000000;
-  overflow-x: hidden;
-  font-family: "Times New Roman", Times, serif, sans-serif;
-}
-section {
-  width: 100%;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  z-index: -100;
-}
+@media screen and (min-width: 600px){
 #home {
   display: flex;
   flex-wrap: wrap;
   align-items: start;
-
+ 
 }
 nav {
   position: fixed;
@@ -502,160 +484,92 @@ nav {
   height: 10vh;
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
+  align-items: start;
   z-index: 1000;
 }
-nav .logo img {
-  width: 12%;
-  position: relative;
-  left: 10%;
+nav .logo img{
+  width: 100%;
+  height: 10vh;
   border-radius: 50%;
+  position: relative;
+  top: 5vh;
 }
 nav ul {
+  
+  position: relative;
+  left: 10%;
   display: flex;
   list-style: none;
   padding: 0%;
   margin: 0%;
-  width: 50%;
-  justify-content: space-around;
+  width: 80%;
   position: relative;
-  left: 13%;
 }
-nav ul li {
+nav ul li { 
+  
   padding: 3%;
   font-size: 1.2rem;
 }
 nav ul li a {
-  text-decoration: none;
+ 
   color: #ffffff;
-  transition: color 0.3s, background-color 0.3s;
+  text-decoration: none;
+  font-weight: 600;
 }
 nav ul li a.active {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   border-radius: 20px;
-  padding: 0.5rem 2rem;
+  padding: 0.1rem 0.8rem;
   display: inline-block;
 }
-
-.gallery-container {
-  max-width: 90%;
-  height: 90vh;
-  position: relative;
-  top: 5vh;
-  left: 5%;
-  overflow: scroll;
-  white-space: nowrap;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-}
-.gallery {
-  gap: 1rem;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-.gallery img {
-  width: 100%;
-  max-width: 200px;
-  height: 150px;
-  object-fit: cover;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: transform 0.3s;
-  
-}
-.gallery img:hover {
-  transform: scale(1.5);
-}
-
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-}
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  border-radius: 5px;
-}
-.close-btn,
-.prev-btn,
-.next-btn {
-  position: absolute;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
-}
-.close-btn {
-  top: 1rem;
-  right: 1rem;
-}
-.prev-btn {
-  left: 1rem;
-}
-.next-btn {
-  right: 1rem;
-}
-.close-btn:hover,
-.prev-btn:hover,
-.next-btn:hover {
-  color: #ffffff;
-}
-.content {
-  width: 60%;
-  height: 100vh;
-}
 #home .text {
+  
+  display: flex;
+  width: 70%;
   font-size: 2rem;
   font-weight: 600;
   color: #ffffff;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
   text-transform: uppercase;
   list-style: none;
   position: relative;
-  top: 40%;
-  left: 50%;
+  top: 30vh;
+  left: 40%;
   transform: translate(-50%, -50%);
-  text-align: center;
   height: 10vh;
 }
 #home p {
   font-size: 1.2rem;
   color: #ffffff;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
   text-align: center;
-  width: 80%;
+  width: 70%;
   position: relative;
-  top: 50%;
-  left: 50%;
+  top: 50vh;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
 #home .pic {
+  display: flex;
   flex-grow: 1;
   height: 100vh;
 }
 #home .pic img {
-  width: 40%;
+  width: 50%;
   height: 70vh;
   position: absolute;
   top: 15vh;
-  right: 1%;
+  right: 0%;
   z-index: -100;
   border-radius: 10px;
+}
+
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  width: 100%;
+  height: 100vh;
 }
 #detail h1 {
   width: fit-content;
@@ -669,28 +583,39 @@ nav ul li a.active {
   color: #ffffff;
   text-transform: uppercase;
 }
-.detail {
+.deup{
   display: flex;
   flex-wrap: wrap;
   align-items: start;
   width: 100%;
-  height: 100vh;
-}
-.detail .img img {
-  width: 100%;
-  height: 25vh;
+  height: 30vh;
   position: relative;
-  top: 10vh;
+  top: 0vh;
+  left: 0%;
+  
+}
+.detail .img{
+  width: 40%;
+  height: 100%;
+  position: relative;
   border-radius: 50%;
 }
-
+.deup img{
+  width: 40%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  top: 15vh;
+  left: 22%;
+}
 .detail .createDetail {
   color: #ffffff;
   position: relative;
-  top: 10vh;
-  left: 10%;
-  width: 60%;
-  height: 40vh;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 30%;
+  width: 50%;
+  height: 30vh;
 }
 .detail .createDetail p {
   font-size: 1.2rem;
@@ -705,12 +630,13 @@ nav ul li a.active {
   align-items: start;
   gap: 10px;
   color: #ffffff;
-  width: 100%;
-  height: 60vh;
+  width: 90%;
+  height: 50vh;
   position: relative;
-  top: 5vh;
-  left: 5%;
+  top: 0vh;
+  left: 10%;
 }
+
 .aim .idetail {
   width: 30%;
   height: 50vh;
@@ -726,22 +652,24 @@ nav ul li a.active {
 .aim .idetail p {
   width: 90%;
   height: 80%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
 }
 .aim .idetail ol {
   width: 90%;
   height: 80%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   margin-bottom: 3px;
 }
+
 .aim button {
   height: 5vh;
-  width: 50%;
+  width: 30%;
   position: relative;
-  top: -10vh;
-  left: 20%;
+  top: 15vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: transparent;
 }
 .aim button a {
@@ -753,41 +681,17 @@ nav ul li a.active {
 .aim button:hover {
   background: transparent;
 }
+
 .aim button:hover a {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-  padding: 0.5rem;
   display: inline-block;
-}
-#gallery h1 {
-  width: fit-content;
-  position: relative;
-  top: 50%;
-  left: -4%;
-  transform: translate(-50%, 50%);
-  transform: rotate(90deg);
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-#contact h1 {
-  width: fit-content;
-  position: relative;
-  top: 50%;
-  left: -6%;
-  transform: translate(-50%, 50%);
-  transform: rotate(90deg);
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-transform: uppercase;
 }
 #services h1 {
   width: 10%;
   position: relative;
   top: 50%;
-  left: -4%;
+  left: 0%;
   transform: translate(-50%, 50%);
   transform: rotate(90deg);
   font-size: 2rem;
@@ -804,13 +708,17 @@ nav ul li a.active {
 }
 .serContent .proposal {
   width: 45%;
+  height: 10vh;
+
+  
 }
 .serContent .work {
   width: 45%;
   flex-grow: 1;
+ 
 }
 .serContent h2 {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
   text-transform: uppercase;
@@ -820,7 +728,8 @@ nav ul li a.active {
   top: 7vh;
 }
 .serContent p {
-  font-size: 1.5rem;
+ 
+  font-size: 1rem;
   width: 100%;
   color: #ffffff;
   position: relative;
@@ -855,15 +764,100 @@ nav ul li a.active {
   width: 80%;
   height: 100%;
 }
+
+.gallery-container {
+  position: relative;
+  max-width: 90%;
+  height: 90vh;
+  position: relative;
+  overflow: scroll;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.gallery {
+  gap: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.gallery img {
+  width: 100%;
+  max-width: 200px;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  
+}
+.gallery img:hover {
+  transform: scale(1.2);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.close-btn,
+.prev-btn,
+.next-btn {
+  position: absolute;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+.close-btn {
+  top: 1rem;
+  right: 1rem;
+}
+.prev-btn {
+  left: 1rem;
+}
+.next-btn {
+  right: 1rem;
+}
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+  color: #ffffff;
+}
+.content {
+  width: 60%;
+  height: 100vh;
+}
 #contact .uper {
+  
   position: relative;
   top: 10vh;
+  left: 0%;
   display: flex;
   flex-wrap: wrap;
   align-items: start;
+  width: 100%;
+  height: 50vh;
 }
 .getInTouch {
-  width: 40%;
+  position: relative;
+  left: 0%;
+ 
+  width: 50%;
   height: 40vh;
   border-radius: 10px;
 }
@@ -874,14 +868,14 @@ nav ul li a.active {
 }
 .getInTouch input,
 .getInTouch textarea {
-  width: 100%;
+  width: 90%;
   padding: 0.75rem;
   margin: 0.5rem 0;
   border-radius: 5px;
   border: 1px solid #ffffff;
 }
 .getInTouch button {
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   background-color: #ffffff;
   border: none;
   color: black;
@@ -890,10 +884,12 @@ nav ul li a.active {
   border-radius: 5px;
 }
 .socialMedia {
-  flex-grow: 1;
+
+  width: 50%;
   height: 40vh;
 }
 .socialMedia ul {
+ 
   display: flex;
   flex-wrap: wrap;
   align-items: start;
@@ -907,20 +903,20 @@ nav ul li a.active {
 }
 .socialMedia ul li {
   list-style: none;
-  padding: 4%;
   position: relative;
-  top: 20%;
+  top: 50%;
   left: 20%;
+  transform: translate(-50%, -50%);
   transition: transform 0.6s ease-in-out;
 }
 .socialMedia ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 1.4rem;
   box-shadow: #ffffff 0px 0px 10px;
 }
 .socialMedia ul li:hover {
-  transform: scale(2);
+  transform: translate(-50%, -50%) scale(2);
   transition: transform 0.2s ease-out;
 }
 .socialMedia ul li a:hover {
@@ -929,9 +925,9 @@ nav ul li a.active {
   cursor: pointer;
   text-shadow: #ffffff 0px 0px 10px;
 }
-.contactContent hr {
+#contact hr {
   position: relative;
-  top: 0vh;
+  top: 7vh;
   width: 100%;
   height: 1px;
   background: #ffffff;
@@ -939,19 +935,16 @@ nav ul li a.active {
 .lower {
   width: 100%;
   height: 50vh;
+  position: relative;
+  top: 7vh;
 }
 .lower .lo {
-  padding-top: 2%;
-  margin-left: 1%;
-  margin-right: 2%;
   width: 30%;
   height: 50vh;
   float: left;
-}
-.lower h2 {
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 1rem;
+  position: relative;
+  top: 1vh;
+  left: 1%;
 }
 .lower ul {
   width: 100%;
@@ -964,4 +957,58 @@ nav ul li a.active {
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
-} */
+} 
+}
+@media screen and (min-width: 800px)
+{
+  nav ul li{
+    position: relative;
+    left: 35%;
+    }
+  .detail .img{
+  width: 40%;
+  height: 100%;
+
+}
+.deup img{
+  width: 30%;
+  height: 100%;
+}
+.detail .createDetail{
+  position:relative;
+  left: 40%
+}
+.detail .createDetail p {
+  top: 50%;
+  transform: translateY(-50%);
+}
+}
+@media screen and (min-width: 1200px)
+{
+ 
+  .detail .img{
+  width: 40%;
+  height: 100%;
+
+}
+.deup img{
+  width: 20%;
+  height: 100%;
+}
+
+
+}
+@media screen and (min-width: 1600px){
+#detail h1 {
+  position: relative;
+  left: 1%;
+}
+}
+@media screen and (min-width: 1800px)
+{
+.getInTouch button {
+  padding: 0.7rem 1.5rem;
+
+  border-radius: 5px;
+}
+}
