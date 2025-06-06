@@ -498,7 +498,7 @@ nav .logo img{
 nav ul {
   
   position: relative;
-  left: 10%;
+  left: 5%;
   display: flex;
   list-style: none;
   padding: 0%;
@@ -961,9 +961,9 @@ nav ul li a.active {
 }
 @media screen and (min-width: 800px)
 {
-  nav ul li{
+nav ul li{
     position: relative;
-    left: 35%;
+    left: 0%;
     }
   .detail .img{
   width: 40%;
@@ -983,8 +983,18 @@ nav ul li a.active {
   transform: translateY(-50%);
 }
 }
+@media screen and (min-width: 1000px){
+  nav ul li{
+    position: relative;
+    left: 30%;
+    }
+}
 @media screen and (min-width: 1200px)
 {
+  nav ul li{
+    position: relative;
+    left: 40%;
+    }
  
   .detail .img{
   width: 40%;
