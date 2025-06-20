@@ -19,7 +19,225 @@ section {
   margin: 0;
   z-index: -100;
 }
+section{
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(38, 44, 39, 0), rgba(16, 22, 19, 0.5), rgba(21, 41, 29, 0.5), rgba(23, 49, 34, 0.5), rgba(22, 63, 37, 0.5));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
 @media screen and (min-width: 300px){
+  @keyframes appear{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes scale {
+  from{
+    scale: 0;
+  }
+  to{
+    scale: 1;
+  }
+}
+@keyframes scale_appear{
+  from{
+    scale: 0;
+    opacity: 0;
+  }
+  to{
+    scale: 1;
+    opacity: 1;
+  }
+}
+@keyframes moveD {
+  
+  from{
+  transform: translateX(-100vh);
+  opacity: 0;
+}
+  to{
+  transform: translateY(0vh);
+  opacity: 1;
+}
+
+}
+@keyframes moveL {
+ from{
+  transform: translateX(0%);
+ }
+ to{
+  transform: translateX(0%);
+ }
+  
+}
+@keyframes moveR{
+  from{
+    transform: translateX(-100%);
+    opacity: 0.3;
+  }
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes op{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes bottomUp{
+  from{
+    opacity: 0.1;
+    transform: translateY(100vh) translateX(0%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%) translateX(0%);
+  }
+}
+@keyframes fadeIN {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#home .content li {
+  animation: fadeIN 3s ease-in-out forwards;
+  animation-delay: 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#home .content p {
+  animation: fadeIN 3s ease-in-out forwards;
+  animation-delay: 2s; /* starts after li finishes */
+  opacity: 0;
+  visibility: hidden;
+}
+
+#home .pic {
+  animation: fadeIN 3s ease-in forwards;
+  animation-delay: 3s; /* starts after p finishes */
+  opacity: 0;
+  visibility: hidden;
+}
+
+#home nav {
+  animation: fadeIN 3s ease-in-out forwards;
+  animation-delay: 5s; /* starts after pic finishes */
+  opacity: 0;
+  visibility: hidden;
+}
+.detail .createDetail p{
+  animation: scale 5s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 70vh ;
+}
+.detail img{
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 70vh ;
+}
+.detail h1{
+  animation: moveD 3s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 60vh ;
+
+}
+.detail h2{
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 80vh ;
+
+}
+.idetail p{
+  animation: moveR 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 50vh;
+}
+.idetail li{
+  animation: moveR 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 20vh;
+}
+.aim button{
+  animation: op 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 20vh;
+}
+#services h1{
+   animation: moveD 3s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 60vh ;
+}
+.serContent h2{
+  animation: scale  3s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 60vh ;
+}
+.serContent p{
+  animation: appear  5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 50vh ;
+}
+.serContent li{
+  animation: moveR  5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 50vh ;
+}
+#gallery h1{
+  animation: moveD 3s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 60vh ;
+}
+.gallery-container{
+  animation: appear  5s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 50vh ;
+}
+.getInTouch h2{
+  animation: appear  3s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 30vh ;
+}
+.getInTouch input, .getInTouch textarea, .getInTouch button{
+  animation: moveR 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 30vh ;
+}
+.social li{
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 70vh ;
+}
+#contact hr{
+  animation: moveR 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 40vh ;
+}
+.lower h2{
+  animation: moveR 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 25vh ;
+}
+.lower li{
+  animation: scale_appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 25vh ;
+}
   #home {
   display: flex;
   flex-wrap: wrap;
@@ -86,7 +304,7 @@ nav .logo img{
   width: 20%;
   height: 10vh;
   position: relative;
-  top: 10vh;
+  top: 7vh;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -271,6 +489,9 @@ top: 2vh;
   width: 80%;
   height: 100%;
 }
+.video{
+  display: none;
+}
 #gallery h1 {
   text-transform: uppercase;
   font-weight: 600;
@@ -292,15 +513,16 @@ top: 2vh;
   white-space: nowrap;
   scrollbar-width: none;
    -ms-overflow-style: none;
-    border-color: rgb(46, 139, 27);
+    border-color: rgb(51, 114, 59);
   border-style: solid;
+  box-shadow: 0px 0px 40px rgba(122, 163, 95, 0.5);
   /* Hide scrollbar for IE and Edge */
 }
 .gallery {
   gap: 1px;
   padding: 1px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
 }
 .gallery img {
   width: 100%;
@@ -450,7 +672,7 @@ top: 2vh;
   margin-left: 1%;
   margin-right: 2%;
   width: 30%;
-  height: 50vh;
+  height: 40vh;
   float: left;
 }
 .lower h2 {
@@ -470,8 +692,227 @@ top: 2vh;
   font-size: 20px;
   font-weight: 600;
 }
+
+.lower ul li a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.lower li:hover {
+   transform: scale(1.2);
+  transition: transform 0.2s ease-out;
+}
 }
 @media screen and (min-width: 600px){
+@keyframes appear{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes scale {
+  from{
+    scale: 0;
+  }
+  to{
+    scale: 1;
+  }
+}
+@keyframes scale_appear{
+  from{
+    scale: 0;
+    opacity: 0;
+  }
+  to{
+    scale: 1;
+    opacity: 1;
+  }
+}
+@keyframes moveD {
+  
+  from{
+  transform: translateY(-100vh) rotate(90deg);
+  opacity: 0;
+}
+  to{
+  transform: translateY(0vh) rotate(90deg);
+  opacity: 1;
+}
+
+}
+@keyframes moveL {
+ from{
+  transform: translateX(0%);
+ }
+ to{
+  transform: translateX(0%);
+ }
+  
+}
+@keyframes moveR{
+  from{
+    transform: translateX(-100%);
+    opacity: 0.3;
+  }
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes op{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes bottomUp{
+  from{
+    opacity: 0.1;
+    transform: translateY(100vh) translateX(0%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%) translateX(0%);
+  }
+}
+@keyframes fadeIN {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#home .content li {
+  animation: fadeIN 3s ease-in-out forwards;
+  animation-delay: 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#home .content p {
+  animation: fadeIN 3s ease-in-out forwards;
+  animation-delay: 2s; /* starts after li finishes */
+  opacity: 0;
+  visibility: hidden;
+}
+
+#home .pic {
+  animation: fadeIN 3s ease-in forwards;
+  animation-delay: 3s; /* starts after p finishes */
+  opacity: 0;
+  visibility: hidden;
+}
+
+#home nav {
+  animation: fadeIN 3s ease-in-out forwards;
+  animation-delay: 5s; /* starts after pic finishes */
+  opacity: 0;
+  visibility: hidden;
+}
+.detail .createDetail p{
+  animation: scale 5s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 70vh ;
+}
+.detail img{
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 70vh ;
+}
+.detail h1{
+  animation: moveD 3s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 60vh ;
+
+}
+.detail h2{
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 80vh ;
+
+}
+.idetail p{
+  animation: moveR 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 50vh;
+}
+.idetail li{
+  animation: moveR 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 20vh;
+}
+.aim button{
+  animation: op 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 20vh;
+}
+#services h1{
+   animation: moveD 3s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 60vh ;
+}
+.serContent h2{
+  animation: scale  3s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 60vh ;
+}
+.serContent p{
+  animation: appear  5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 50vh ;
+}
+.serContent li{
+  animation: moveR  5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 50vh ;
+}
+#gallery h1{
+  animation: moveD 3s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 60vh ;
+}
+.gallery-container{
+  animation: appear  5s linear;
+  animation-timeline: view();
+  animation-range: entry -50vh cover 50vh ;
+}
+.getInTouch h2{
+  animation: appear  3s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 30vh ;
+}
+.getInTouch input, .getInTouch textarea, .getInTouch button{
+  animation: moveR 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 30vh ;
+}
+.social li{
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 70vh ;
+}
+#contact hr{
+  animation: moveR 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 40vh ;
+}
+.lower h2{
+  animation: moveR 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 25vh ;
+}
+.lower li{
+  animation: scale_appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0vh cover 25vh ;
+}
 #home {
   display: flex;
   flex-wrap: wrap;
@@ -494,6 +935,7 @@ nav .logo img{
   border-radius: 50%;
   position: relative;
   top: 5vh;
+
 }
 nav ul {
   
@@ -548,20 +990,24 @@ nav ul li a.active {
   top: 50vh;
   left: 40%;
   transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 30px #527e35;
+  border-radius: 10px;
 }
 #home .pic {
   display: flex;
   flex-grow: 1;
   height: 100vh;
+  
 }
 #home .pic img {
-  width: 50%;
-  height: 70vh;
+  width: 40%;
+  height: 50vh;
   position: absolute;
-  top: 15vh;
-  right: 0%;
-  z-index: -100;
+  top: 25vh;
+  right: 5%;
+  z-index: 100;
   border-radius: 10px;
+  box-shadow:  10px 10px 10px rgba(178, 216, 173, 0.5);
 }
 
 .detail {
@@ -599,6 +1045,7 @@ nav ul li a.active {
   height: 100%;
   position: relative;
   border-radius: 50%;
+
 }
 .deup img{
   width: 40%;
@@ -607,6 +1054,7 @@ nav ul li a.active {
   border-radius: 50%;
   top: 15vh;
   left: 22%;
+   box-shadow: 0px 0px 20px #96da90;
 }
 .detail .createDetail {
   color: #ffffff;
@@ -617,12 +1065,14 @@ nav ul li a.active {
   width: 50%;
   height: 30vh;
 }
+
 .detail .createDetail p {
   font-size: 1.2rem;
   text-align: center;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+ 
 }
 .detail .aim {
   display: flex;
@@ -726,6 +1176,9 @@ nav ul li a.active {
   margin-top: 2rem;
   position: relative;
   top: 7vh;
+  left: 40%;
+  width: fit-content;
+   box-shadow: 0px 0px 30px #5f943c;
 }
 .serContent p {
  
@@ -764,7 +1217,37 @@ nav ul li a.active {
   width: 80%;
   height: 100%;
 }
-
+.video
+{
+  display: flex;
+  width: 80%;
+  height: 50vh;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 0px 30px #5f943c;
+}
+.video video
+{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#gallery h1{
+width: 10%;
+  position: relative;
+  top: 50%;
+  left: -3%;
+  transform: translate(-50%, 50%);
+  transform: rotate(90deg);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+}
 .gallery-container {
   position: relative;
   max-width: 90%;
@@ -776,20 +1259,19 @@ nav ul li a.active {
   -ms-overflow-style: none;
 }
 .gallery {
-  gap: 1rem;
-  padding: 1rem;
+  gap: 1px;
+  padding: 1px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
 }
 .gallery img {
   width: 100%;
-  max-width: 200px;
-  height: 150px;
+  height: 30vh;
   object-fit: cover;
   cursor: pointer;
   border-radius: 5px;
   transition: transform 0.3s;
-  
+  /* Added for performance */
 }
 .gallery img:hover {
   transform: scale(1.2);
@@ -843,7 +1325,7 @@ nav ul li a.active {
   height: 100vh;
 }
 #contact .uper {
-  
+
   position: relative;
   top: 10vh;
   left: 0%;
@@ -896,11 +1378,6 @@ nav ul li a.active {
   width: 100%;
   height: 40vh;
 }
-.socialMedia h2 {
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 1rem;
-}
 .socialMedia ul li {
   list-style: none;
   position: relative;
@@ -934,21 +1411,22 @@ nav ul li a.active {
 }
 .lower {
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   position: relative;
   top: 7vh;
 }
 .lower .lo {
   width: 30%;
-  height: 50vh;
+  height: 40vh;
   float: left;
   position: relative;
   top: 1vh;
   left: 1%;
 }
+
 .lower ul {
   width: 100%;
-  height: 100%;
+  height: 80%;
 }
 .lower ul li {
   list-style: none;
@@ -988,6 +1466,14 @@ nav ul li{
     position: relative;
     left: 30%;
     }
+    .video
+{
+  
+  width: 50%;
+  height: 50vh;
+
+ 
+}
 }
 @media screen and (min-width: 1200px)
 {
