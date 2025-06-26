@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   // Navigation highlighting
   const navLinks = document.querySelectorAll("nav ul li a");
@@ -103,3 +104,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Start animation
   type();
 });
+

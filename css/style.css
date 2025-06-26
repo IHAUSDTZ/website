@@ -1,242 +1,20 @@
-* {
+*{
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
 }
-body {
+body{
   position: relative;
-  top: 0%;
+  top: 0vh;
   left: 0%;
-  color: rgb(255, 255, 255);
-  background: #000000;
-  overflow-x: hidden;
-  font-family: "Times New Roman", Times, serif, sans-serif;
-}
-section {
-  width: 100%;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  z-index: -100;
+  font-family: 'Times New Roman', Times, serif;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(201, 255, 223, 1) 42%, rgba(175, 224, 194, 1) 69%, rgba(135, 255, 183, 1) 87%, rgba(158, 255, 197, 1) 100%);
 }
 section{
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(38, 44, 39, 0), rgba(16, 22, 19, 0.5), rgba(21, 41, 29, 0.5), rgba(23, 49, 34, 0.5), rgba(22, 63, 37, 0.5));
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-}
-@media screen and (min-width: 300px){
-  @keyframes appear{
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-@keyframes scale {
-  from{
-    scale: 0;
-  }
-  to{
-    scale: 1;
-  }
-}
-@keyframes scale_appear{
-  from{
-    scale: 0;
-    opacity: 0;
-  }
-  to{
-    scale: 1;
-    opacity: 1;
-  }
-}
-@keyframes moveD {
-  
-  from{
-  transform: translateX(-100vh);
-  opacity: 0;
-}
-  to{
-  transform: translateY(0vh);
-  opacity: 1;
-}
-
-}
-@keyframes moveL {
- from{
-  transform: translateX(0%);
- }
- to{
-  transform: translateX(0%);
- }
-  
-}
-@keyframes moveR{
-  from{
-    transform: translateX(-100%);
-    opacity: 0.3;
-  }
-  to{
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-@keyframes op{
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-@keyframes bottomUp{
-  from{
-    opacity: 0.1;
-    transform: translateY(100vh) translateX(0%);
-  }
-  to{
-    opacity: 1;
-    transform: translateY(0%) translateX(0%);
-  }
-}
-@keyframes fadeIN {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-#home .content li {
-  animation: fadeIN 3s ease-in-out forwards;
-  animation-delay: 0s;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#home .content p {
-  animation: fadeIN 3s ease-in-out forwards;
-  animation-delay: 2s; /* starts after li finishes */
-  opacity: 0;
-  visibility: hidden;
-}
-
-#home .pic {
-  animation: fadeIN 3s ease-in forwards;
-  animation-delay: 3s; /* starts after p finishes */
-  opacity: 0;
-  visibility: hidden;
-}
-
-#home nav {
-  animation: fadeIN 3s ease-in-out forwards;
-  animation-delay: 5s; /* starts after pic finishes */
-  opacity: 0;
-  visibility: hidden;
-}
-.detail .createDetail p{
-  animation: scale 5s ease-in-out;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 70vh ;
-}
-.detail img{
-  animation: appear 5s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 70vh ;
-}
-.detail h1{
-  animation: moveD 3s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 60vh ;
-
-}
-.detail h2{
-  animation: appear 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 80vh ;
-
-}
-.idetail p{
-  animation: moveR 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 50vh;
-}
-.idetail li{
-  animation: moveR 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 20vh;
-}
-.aim button{
-  animation: op 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 20vh;
-}
-#services h1{
-   animation: moveD 3s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 60vh ;
-}
-.serContent h2{
-  animation: scale  3s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 60vh ;
-}
-.serContent p{
-  animation: appear  5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 50vh ;
-}
-.serContent li{
-  animation: moveR  5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 50vh ;
-}
-#gallery h1{
-  animation: moveD 3s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 60vh ;
-}
-.gallery-container{
-  animation: appear  5s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 50vh ;
-}
-.getInTouch h2{
-  animation: appear  3s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 30vh ;
-}
-.getInTouch input, .getInTouch textarea, .getInTouch button{
-  animation: moveR 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 30vh ;
-}
-.social li{
-  animation: appear 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 70vh ;
-}
-#contact hr{
-  animation: moveR 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 40vh ;
-}
-.lower h2{
-  animation: moveR 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 25vh ;
-}
-.lower li{
-  animation: scale_appear 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 25vh ;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1000;
 }
   #home {
   display: flex;
@@ -246,19 +24,20 @@ section{
 nav ul {
   display: none;
 }
+
 #home .pic {
  display: none;
 }
 nav .logo img{
-  width: 70%;
-  height: 40vh;
+  width: 60%;
+  height: 30vh;
   position: absolute;
   left: 50%;
   top: 30vh;
   transform: translate(-50%, -50%);
   z-index: -100;
   border-radius: 50%;
-  opacity: 1;
+  opacity: 0.9;
 }
 #home p {
   font-size: 0.8rem;
@@ -272,7 +51,7 @@ nav .logo img{
 #home .text {
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
   list-style: none;
   text-align: center;
@@ -282,17 +61,8 @@ nav .logo img{
   top:-40vh;
   left:5%;
 }
-#detail h1 {
-  width: fit-content;
-  position: relative;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-transform: uppercase;
-}
+
+
 .detail {
   display: flex;
   flex-wrap: wrap;
@@ -300,101 +70,87 @@ nav .logo img{
   width: 100%;
   height: 100vh;
 }
+#detail h1 {
+  width: fit-content;
+  position: relative;
+  top: 0vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+}
 .deup img {
   width: 20%;
   height: 10vh;
   position: relative;
-  top: 7vh;
+  top: 0vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   border-radius: 50%;
 }
 .detail .createDetail {
-  color: #ffffff;
+  color: #000000;
   position: relative;
-  top: 1vh;
-  width: 100%;
+  top: 0vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
   height: 20vh;
 }
 .detail .createDetail p {
   font-size: 0.9rem;
   text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .detail .aim {
+  overflow: scroll;
+  scrollbar-width: none;        
+  -ms-overflow-style: none; 
   display: flex;
   flex-wrap: wrap;
   align-items: start;
-  gap: 10px;
-  color: #ffffff;
+  color: #000000;
   width: 100%;
   height: 60vh;
   position: relative;
-  top: -6vh;
-  left:0%;
+  top: 0vh;
+  left: 0%;
+  gap: 1vh;
 }
-.aim .idetail {
-  width: 100%;
-  height: 20vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-}
-#idetail_vision {
-height: 10vh;
 
-position: relative;
-top: 2vh;
-
-}
-#idetail_mision{
-  height: 11vh;
-  position: relative;
-  top: 2vh;
-  
-}
 .aim .idetail h2 {
-  font-size: 1rem;
+  height: fit-content;
+  width: fit-content;
+  font-size: 1.2rem;
   position: relative;
+  top: 0vh;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 0%);
 }
 .aim .idetail p {
   width: 100%;
-  height: 100%;
+  height: fit-content;
   font-size: 0.8rem;
   text-align: center;
-  position: relative;
-  top: 1vh;
-}
-#idetail_key{
-  height: 30vh;
-  position: relative;
-  top: 2vh;
 }
 .aim .idetail ol {
-  width: 90%;
-  height: 80%;
-  font-size: 0.8rem;
+  width: 100%;
   text-align: center;
-  margin-bottom: 3px;
 }
-
 #idetail_key li{
   padding: 3px;
   text-align: left;
   position: relative;
-  top: 2vh;
+  top: 0vh;
   left: 10%;
-  font-size: 0.8
+  font-size: 0.8rem;
 }
 .aim button {
   height: 3vh;
   width: 30%;
   position: relative;
-  top: 3vh;
+  top: 0vh;
   left: 50%;
   border-radius: 50px;
   transform: translate(-50%, -50%);
@@ -403,7 +159,7 @@ top: 2vh;
 .aim button a {
   width: 100%;
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   font-size: .8rem;
 }
 .aim button:hover {
@@ -423,11 +179,14 @@ top: 2vh;
   width: fit-content;
   font-size: 1rem;
   position: relative;
-  top: 1vh;
+  top: 0vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
 }
 .serContent {
+  overflow: scroll;
+   scrollbar-width: none;        
+  -ms-overflow-style: none; 
   width: 100%;
   height: 100vh;
   display: flex;
@@ -437,29 +196,30 @@ top: 2vh;
 }
 .serContent .proposal {
   width: 100%;
-  height: 35vh;
+  height: 20vh;
   position: relative;
 }
 .serContent .work {
   width: 100%;
-  height: 35vh;
+  height: 20vh;
   position: relative;
   top: 0vh;
 }
 .serContent h2 {
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
   text-align: center;
-  
 }
 .serContent p {
-   text-align: center;
+  text-align: center;
   font-size: 0.8rem;
   width: 100%;
-  color: #ffffff;
+  color: #000000;
+  position: relative;
 }
+
 .serContent .pdf {
   width: 100%;
 }
@@ -473,15 +233,14 @@ top: 2vh;
   top: 4vh;
 }
 .serContent a {
- 
+  font-size: 0.8rem;
   text-decoration: none;
-  color: #333;
+  color: #000000;
   font-weight: bold;
   display: block;
   width: 80%;
-  color: #ffffff;
-  margin-bottom: 5%;
-  box-shadow: 0 2px 6px #ffffff;
+  color: #000000;
+  box-shadow: 0 2px 6px #000000;
 }
 .serContent a:hover {
   background: #818682;
@@ -490,7 +249,21 @@ top: 2vh;
   height: 100%;
 }
 .video{
-  display: none;
+  display: flex;
+  width: 80%;
+  height: 30vh;
+  position: relative;
+  top: 0vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 0px 30px #5f943c;
+}
+.video video{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 #gallery h1 {
   text-transform: uppercase;
@@ -498,13 +271,13 @@ top: 2vh;
   width: fit-content;
   font-size: 1rem;
   position: relative;
-  top: 10vh;
+  top: 0vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
 }
 .gallery-container {
   max-width: 90%;
-  height: 50vh;
+  height: 80vh;
   position: relative;
   top: 50vh;
   left: 50%;
@@ -519,7 +292,7 @@ top: 2vh;
   /* Hide scrollbar for IE and Edge */
 }
 .gallery {
-  gap: 1px;
+  gap: 4px;
   padding: 1px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
@@ -567,6 +340,7 @@ top: 2vh;
   top: 1rem;
   right: 1rem;
 }
+
 .prev-btn {
   left: 1rem;
 }
@@ -578,23 +352,16 @@ top: 2vh;
 .next-btn:hover {
   color: #ffffff;
 }
-.contactContent{
-  width: 100vh;
-  height: 100vh;
-}
-#contact .uper {
-  position: relative;
-  top: 5vh;
-}
 .getInTouch {
   width: 90%;
   height: 35vh;
   position: relative;
-  left: 5%;
-  border-radius: 10px;
+  top: 1vh;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .getInTouch h2 {
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -604,11 +371,14 @@ top: 2vh;
   left: 2.5%;
   width: 90%;
   padding: 0.5rem;
-  margin: 0.2rem 0;
+  margin: 0.1rem ;
   border-radius: 5px;
   border: 1px solid #ffffff;
+  height: 2vh;
 }
+
 .getInTouch button {
+  height: 5vh;
   padding: 0.5rem .5rem;
   background-color: #ffffff;
   border: none;
@@ -620,35 +390,36 @@ top: 2vh;
   left: 2.5%;
 }
 .socialMedia {
+  position: relative;
+  top: 6vh;
   width: 100%;
-  height: 10vh;
-}
-.socialMedia h2 {
-  display: none;
+  height: fit-content;
 }
 .socialMedia ul {
   display: flex;
   flex-wrap: wrap;
   align-items: start;
   width: 100%;
-  height: 40vh;
+
 }
 .socialMedia ul li {
   position: relative;
-  left: 5%;
+  top: 0vh;
+  left: 10%;
   list-style: none;
-  padding: 4%;
+  padding: 5%;
   transition: transform 0.6s ease-in-out;
 }
 .socialMedia ul li a {
   text-decoration: none;
-  color: #ffffff;
-  box-shadow: #ffffff 0px 0px 10px;
+  color: #000000;
+  box-shadow: #a87a7a 0px 0px 10px;
 }
 .socialMedia ul li:hover {
   transform: scale(2);
   transition: transform 0.2s ease-out;
 }
+
 .socialMedia ul li a:hover {
   color: #ffffff;
   box-shadow: #ffffff 0px 0px 20px;
@@ -657,15 +428,14 @@ top: 2vh;
 }
 .uper hr {
   position: relative;
-  top: 0vh;
+  top: 10vh;
   width: 100%;
   height: 1px;
   background: #ffffff;
 }
 .lower {
- 
   width: 100%;
-  height: 40vh;
+  height: 50vh;
 }
 .lower .lo {
   padding-top: 2%;
@@ -674,251 +444,30 @@ top: 2vh;
   width: 30%;
   height: 40vh;
   float: left;
+  align-content: center;
 }
 .lower h2 {
-  color: #ffffff;
+  color: #000000;
   text-align: center;
-  margin-bottom: 1rem;
-}
-.lower ul {
-  width: 100%;
-  height: 100%;
+  margin-bottom: .8rem;
 }
 .lower ul li {
   list-style: none;
   padding: 1%;
   text-align: center;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 0.7rem;
   font-weight: 600;
 }
-
 .lower ul li a{
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 .lower li:hover {
    transform: scale(1.2);
   transition: transform 0.2s ease-out;
 }
-}
-@media screen and (min-width: 600px){
-@keyframes appear{
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-@keyframes scale {
-  from{
-    scale: 0;
-  }
-  to{
-    scale: 1;
-  }
-}
-@keyframes scale_appear{
-  from{
-    scale: 0;
-    opacity: 0;
-  }
-  to{
-    scale: 1;
-    opacity: 1;
-  }
-}
-@keyframes moveD {
-  
-  from{
-  transform: translateY(-100vh) rotate(90deg);
-  opacity: 0;
-}
-  to{
-  transform: translateY(0vh) rotate(90deg);
-  opacity: 1;
-}
-
-}
-@keyframes moveL {
- from{
-  transform: translateX(0%);
- }
- to{
-  transform: translateX(0%);
- }
-  
-}
-@keyframes moveR{
-  from{
-    transform: translateX(-100%);
-    opacity: 0.3;
-  }
-  to{
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-@keyframes op{
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-@keyframes bottomUp{
-  from{
-    opacity: 0.1;
-    transform: translateY(100vh) translateX(0%);
-  }
-  to{
-    opacity: 1;
-    transform: translateY(0%) translateX(0%);
-  }
-}
-@keyframes fadeIN {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-#home .content li {
-  animation: fadeIN 3s ease-in-out forwards;
-  animation-delay: 0s;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#home .content p {
-  animation: fadeIN 3s ease-in-out forwards;
-  animation-delay: 2s; /* starts after li finishes */
-  opacity: 0;
-  visibility: hidden;
-}
-
-#home .pic {
-  animation: fadeIN 3s ease-in forwards;
-  animation-delay: 3s; /* starts after p finishes */
-  opacity: 0;
-  visibility: hidden;
-}
-
-#home nav {
-  animation: fadeIN 3s ease-in-out forwards;
-  animation-delay: 5s; /* starts after pic finishes */
-  opacity: 0;
-  visibility: hidden;
-}
-.detail .createDetail p{
-  animation: scale 5s ease-in-out;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 70vh ;
-}
-.detail img{
-  animation: appear 5s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 70vh ;
-}
-.detail h1{
-  animation: moveD 3s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 60vh ;
-
-}
-.detail h2{
-  animation: appear 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 80vh ;
-
-}
-.idetail p{
-  animation: moveR 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 50vh;
-}
-.idetail li{
-  animation: moveR 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 20vh;
-}
-.aim button{
-  animation: op 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 20vh;
-}
-#services h1{
-   animation: moveD 3s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 60vh ;
-}
-.serContent h2{
-  animation: scale  3s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 60vh ;
-}
-.serContent p{
-  animation: appear  5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 50vh ;
-}
-.serContent li{
-  animation: moveR  5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 50vh ;
-}
-#gallery h1{
-  animation: moveD 3s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 60vh ;
-}
-.gallery-container{
-  animation: appear  5s linear;
-  animation-timeline: view();
-  animation-range: entry -50vh cover 50vh ;
-}
-.getInTouch h2{
-  animation: appear  3s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 30vh ;
-}
-.getInTouch input, .getInTouch textarea, .getInTouch button{
-  animation: moveR 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 30vh ;
-}
-.social li{
-  animation: appear 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 70vh ;
-}
-#contact hr{
-  animation: moveR 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 40vh ;
-}
-.lower h2{
-  animation: moveR 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 25vh ;
-}
-.lower li{
-  animation: scale_appear 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0vh cover 25vh ;
-}
-#home {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
- 
-}
+@media screen and (min-width: 700px) {
 nav {
   position: fixed;
   width: 100%;
@@ -929,16 +478,23 @@ nav {
   align-items: start;
   z-index: 1000;
 }
-nav .logo img{
+nav .logo{
+ width: 10%;
+ height: 8vh;
+ position: relative;
+ top: 1vh;
+ left: 1%;
+}
+nav .logo img {
   width: 100%;
-  height: 10vh;
+  height: 100%;
   border-radius: 50%;
   position: relative;
-  top: 5vh;
-
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 nav ul {
-  
   position: relative;
   left: 5%;
   display: flex;
@@ -949,13 +505,11 @@ nav ul {
   position: relative;
 }
 nav ul li { 
-  
   padding: 3%;
   font-size: 1.2rem;
 }
 nav ul li a {
- 
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   font-weight: 600;
 }
@@ -967,49 +521,53 @@ nav ul li a.active {
   display: inline-block;
 }
 #home .text {
-  
   display: flex;
-  width: 70%;
+  width: 50%;
   font-size: 2rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
   list-style: none;
   position: relative;
   top: 30vh;
-  left: 40%;
-  transform: translate(-50%, -50%);
+  left: 46%;
+  transform: translate(-90%, -50%);
   height: 10vh;
 }
 #home p {
   font-size: 1.2rem;
-  color: #ffffff;
-  text-align: center;
-  width: 70%;
+  color: #000000;
+  width: 40%;
+  height: fit-content;
   position: relative;
   top: 50vh;
-  left: 40%;
-  transform: translate(-50%, -50%);
+  left: 42%;
+  transform: translate(-100%, -50%);
   box-shadow: 0px 0px 30px #527e35;
   border-radius: 10px;
 }
 #home .pic {
   display: flex;
-  flex-grow: 1;
+  width: 100%;
   height: 100vh;
-  
+  position: relative;
+  top: -10vh;
+  left: 52%;
+  transform: rotate(30deg);
+  overflow: hidden;
+  z-index: -100;
 }
 #home .pic img {
-  width: 40%;
+  transform: rotate(-30deg);
+  width: 100%;
   height: 50vh;
-  position: absolute;
-  top: 25vh;
-  right: 5%;
-  z-index: 100;
+  position: relative;
+  top: 12vh;
+  left: -20%;
+  z-index: -100;
   border-radius: 10px;
   box-shadow:  10px 10px 10px rgba(178, 216, 173, 0.5);
 }
-
 .detail {
   display: flex;
   flex-wrap: wrap;
@@ -1021,75 +579,57 @@ nav ul li a.active {
   width: fit-content;
   position: relative;
   top: 50%;
-  left: -4%;
-  transform: translate(-50%, 50%);
+  left: -7%;
+  transform: translate(-50%, -50%);
   transform: rotate(90deg);
   font-size: 2rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
 }
 .deup{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
   width: 100%;
-  height: 30vh;
-  position: relative;
-  top: 0vh;
-  left: 0%;
-  
-}
-.detail .img{
-  width: 40%;
-  height: 100%;
-  position: relative;
-  border-radius: 50%;
+  height: 20vh;
 
 }
 .deup img{
-  width: 40%;
-  height: 100%;
+  width: 20%;
+  height: 13vh;
   position: relative;
   border-radius: 50%;
-  top: 15vh;
-  left: 22%;
-   box-shadow: 0px 0px 20px #96da90;
+  top: 0vh;
+  left: 80%;
+  box-shadow: 0px 0px 20px #96da90;
 }
 .detail .createDetail {
-  color: #ffffff;
+  color: #000000;
   position: relative;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 30%;
+  top: -4vh;
+  left: 40%;
   width: 50%;
-  height: 30vh;
+  height: fit-content;
+  transform: translate(-50%, -50%);
 }
-
 .detail .createDetail p {
   font-size: 1.2rem;
   text-align: center;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
- 
 }
 .detail .aim {
   display: flex;
   flex-wrap: wrap;
   align-items: start;
   gap: 10px;
-  color: #ffffff;
+  color: #000000;
   width: 90%;
   height: 50vh;
   position: relative;
   top: 0vh;
-  left: 10%;
+  left: 7%;
+  overflow: unset;
 }
-
 .aim .idetail {
   width: 30%;
-  height: 50vh;
   display: flex;
   flex-wrap: wrap;
   align-items: start;
@@ -1101,23 +641,31 @@ nav ul li a.active {
 }
 .aim .idetail p {
   width: 90%;
-  height: 80%;
+  height: fit-content;
   font-size: 1rem;
   text-align: center;
+  position: relative;
+  top: 15vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 .aim .idetail ol {
   width: 90%;
-  height: 80%;
+  height: fit-content;
   font-size: 1rem;
   text-align: center;
   margin-bottom: 3px;
+  position: relative;
+  top: 15vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 .aim button {
   height: 5vh;
   width: 30%;
   position: relative;
-  top: 15vh;
+  top: 0vh;
   left: 50%;
   transform: translate(-50%, -50%);
   background: transparent;
@@ -1125,28 +673,29 @@ nav ul li a.active {
 .aim button a {
   width: 100%;
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   font-size: 1.5rem;
 }
+
 .aim button:hover {
   background: transparent;
+  
 }
-
 .aim button:hover a {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   display: inline-block;
 }
 #services h1 {
-  width: 10%;
+  width: fit-content;
   position: relative;
   top: 50%;
-  left: 0%;
-  transform: translate(-50%, 50%);
+  left: -7%;
+  transform: translate(-50%, -50%);
   transform: rotate(90deg);
   font-size: 2rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
 }
 .serContent {
@@ -1158,25 +707,25 @@ nav ul li a.active {
 }
 .serContent .proposal {
   width: 45%;
-  height: 10vh;
-
-  
+  height: 10vh; 
+  top: 5vh;
 }
 .serContent .work {
   width: 45%;
-  flex-grow: 1;
- 
+  height: 10vh; 
+  top: 5vh;
 }
 .serContent h2 {
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
   text-align: center;
   margin-top: 2rem;
   position: relative;
-  top: 7vh;
-  left: 40%;
+  top: 0vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: fit-content;
    box-shadow: 0px 0px 30px #5f943c;
 }
@@ -1184,32 +733,31 @@ nav ul li a.active {
  
   font-size: 1rem;
   width: 100%;
-  color: #ffffff;
+  color: #000000;
   position: relative;
-  top: 10vh;
-  left: 3%;
+  top: 1vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .serContent .pdf {
   width: 100%;
   height: 70vh;
   position: relative;
-  top: 15vh;
-  left: 0%;
+  top: 1vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
-.serContent li {
-  list-style: none;
-}
+
 .serContent a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
   display: block;
-  width: 80%;
-  color: #ffffff;
+  color: #000000;
   margin: 8px;
   margin-bottom: 5%;
   padding: 7px;
-  box-shadow: 0 2px 6px #ffffff;
+  box-shadow: 0 2px 6px #000000;
 }
 .serContent a:hover {
   background: #818682;
@@ -1217,41 +765,23 @@ nav ul li a.active {
   width: 80%;
   height: 100%;
 }
-.video
-{
-  display: flex;
-  width: 80%;
-  height: 50vh;
-  position: relative;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0px 0px 30px #5f943c;
-}
-.video video
-{
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
 #gallery h1{
-width: 10%;
+  width: fit-content;
   position: relative;
   top: 50%;
-  left: -3%;
-  transform: translate(-50%, 50%);
+  left: -7%;
+  transform: translate(-50%, -50%);
   transform: rotate(90deg);
   font-size: 2rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
 }
 .gallery-container {
   position: relative;
+  left: 51%;
   max-width: 90%;
-  height: 90vh;
+  height: 80vh;
   position: relative;
   overflow: scroll;
   white-space: nowrap;
@@ -1264,19 +794,9 @@ width: 10%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
 }
-.gallery img {
-  width: 100%;
-  height: 30vh;
-  object-fit: cover;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: transform 0.3s;
-  /* Added for performance */
-}
 .gallery img:hover {
   transform: scale(1.2);
 }
-
 .lightbox {
   display: none;
   position: fixed;
@@ -1320,12 +840,7 @@ width: 10%;
 .next-btn:hover {
   color: #ffffff;
 }
-.content {
-  width: 60%;
-  height: 100vh;
-}
 #contact .uper {
-
   position: relative;
   top: 10vh;
   left: 0%;
@@ -1337,14 +852,13 @@ width: 10%;
 }
 .getInTouch {
   position: relative;
-  left: 0%;
- 
+  left: 25%;
   width: 50%;
   height: 40vh;
   border-radius: 10px;
 }
 .getInTouch h2 {
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -1366,12 +880,10 @@ width: 10%;
   border-radius: 5px;
 }
 .socialMedia {
-
   width: 50%;
   height: 40vh;
 }
 .socialMedia ul {
- 
   display: flex;
   flex-wrap: wrap;
   align-items: start;
@@ -1381,17 +893,18 @@ width: 10%;
 .socialMedia ul li {
   list-style: none;
   position: relative;
-  top: 50%;
+  top: 30%;
   left: 20%;
   transform: translate(-50%, -50%);
   transition: transform 0.6s ease-in-out;
 }
 .socialMedia ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   font-size: 1.4rem;
   box-shadow: #ffffff 0px 0px 10px;
 }
+
 .socialMedia ul li:hover {
   transform: translate(-50%, -50%) scale(2);
   transition: transform 0.2s ease-out;
@@ -1404,16 +917,16 @@ width: 10%;
 }
 #contact hr {
   position: relative;
-  top: 7vh;
+  top: 0vh;
   width: 100%;
   height: 1px;
   background: #ffffff;
 }
 .lower {
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   position: relative;
-  top: 7vh;
+  top: 0vh;
 }
 .lower .lo {
   width: 30%;
@@ -1423,7 +936,6 @@ width: 10%;
   top: 1vh;
   left: 1%;
 }
-
 .lower ul {
   width: 100%;
   height: 80%;
@@ -1436,75 +948,239 @@ width: 10%;
   font-size: 20px;
   font-weight: 600;
 } 
-}
-@media screen and (min-width: 800px)
-{
-nav ul li{
-    position: relative;
-    left: 0%;
-    }
-  .detail .img{
-  width: 40%;
-  height: 100%;
 
 }
-.deup img{
-  width: 30%;
-  height: 100%;
-}
-.detail .createDetail{
-  position:relative;
-  left: 40%
-}
-.detail .createDetail p {
-  top: 50%;
-  transform: translateY(-50%);
-}
-}
+
 @media screen and (min-width: 1000px){
-  nav ul li{
-    position: relative;
-    left: 30%;
-    }
-    .video
-{
-  
-  width: 50%;
+#detail h1, #services h1, #gallery h1{
+  left: -5%;
+}
+  nav ul{
+    left: 20%;
+  }
+  #home p {
+  position: relative;
+  top: 40vh;
+  left: 42%;
+  transform: translate(-100%, -50%);
+
+}
+  #home .pic img {
+  transform: rotate(-30deg);
+  width: 100%;
   height: 50vh;
-
- 
-}
-}
-@media screen and (min-width: 1200px)
-{
-  nav ul li{
-    position: relative;
-    left: 40%;
-    }
- 
-  .detail .img{
-  width: 40%;
-  height: 100%;
-
+  position: relative;
+  top: 40vh;
+  left: -30%;
 }
 .deup img{
-  width: 20%;
-  height: 100%;
-}
-
-
-}
-@media screen and (min-width: 1600px){
-#detail h1 {
+  width: 10%;
+  height: 13vh;
   position: relative;
-  left: 1%;
+  border-radius: 50%;
+  top: 0vh;
+  left: 80%;
+  box-shadow: 0px 0px 20px #96da90;
+}
+.serContent .video{
+  width: 45%;
 }
 }
-@media screen and (min-width: 1800px)
-{
-.getInTouch button {
-  padding: 0.7rem 1.5rem;
+@media  screen and (min-width: 1440px){
+#detail h1, #services h1, #gallery h1{
+  left: -4%;
+}
+}
+section{
+view-timeline-name: --detail;
+view-timeline-axis: block;
+}
+@keyframes MoveDown {
+  0%{
+    opacity: 0;
+    top:-40vh;
+    scale: 0.2;
+  }
+  20%{
+    opacity: 0.2;
+    scale: 0.4;
+  }
+  40%{
+    opacity: 0.4;  
+    scale: 0.6;
+  }
+  60%{
+    opacity: 0.6;   
+    scale: 0.8;
+  }
+  80%{
+    opacity: 0.8;
+    scale: 1;
+  }
+  100%{
+    opacity: 1;
+    scale: 1;
+  }
+}
 
-  border-radius: 5px;
+.detail h1, #services h1, #gallery h1{
+ animation-name: MoveDown;
+  animation-timeline: --detail;
+  animation-duration: 1s;
+  animation-range: entry 0% cover 50%;
 }
+
+@keyframes fadeIN {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+#home .content li {
+  animation: fadeIN 3s ease-in-out forwards;
+  animation-delay: 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+#home .content p {
+  animation: fadeIN 3s ease-in-out forwards;
+  animation-delay: 2s; /* starts after li finishes */
+  opacity: 0;
+  visibility: hidden;
+}
+#home .pic {
+  animation: fadeIN 3s ease-in forwards;
+  animation-delay: 3s; /* starts after p finishes */
+  opacity: 0;
+  visibility: hidden;
+}
+
+#home nav {
+  animation: fadeIN 3s ease-in-out forwards;
+  animation-delay: 5s; /* starts after pic finishes */
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes scale {
+  from{
+    scale: 0;
+    opacity: o;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+.detail .createDetail p{
+  animation-name: scale;
+  animation-timeline: --detail;
+  animation-duration: 3s;
+  animation-range: entry 0vh cover 70vh ;
+}
+.serContent h2{
+  animation-name: scale;
+  animation-timeline: --detail;
+  animation-duration: 3s;
+  animation-range: entry 0vh cover 70vh ;
+}
+.lower li{
+  animation-name: scale;
+  animation-timeline: --detail;
+  animation-duration: 3s;
+  animation-range: entry 0vh cover 100vh ;
+}
+@keyframes appear{
+ from{
+  opacity: 0;
+ }
+ to{
+  opacity: 1;
+ }
+}
+
+.detail img{
+  animation: appear 5s;
+  animation-timeline: --detail;
+  animation-range: entry 0vh cover 70vh ;
+}
+.idetail h2{
+  animation: appear 5s;
+  animation-timeline: --detail;
+  animation-range: entry 0vh cover 70vh ;
+}
+ .aim button{
+  animation: appear 5s;
+  animation-timeline: --detail;
+  animation-range: entry 0vh cover 180vh ;
+
+ }
+ .serContent p{
+  animation: appear 5s;
+  animation-timeline: --detail;
+  animation-range: entry 0vh cover 50vh ;
+ }
+ .serContent video{
+  animation: appear 3s;
+  animation-timeline: --detail;
+  animation-range: entry 0vh cover 160vh ;
+ }
+ .gallery-container{
+  animation: appear 3s;
+  animation-timeline: --detail;
+  animation-range: entry 0vh cover 100vh ;
+ }
+ .getInTouch h2{
+  animation: appear 3s;
+  animation-timeline: --detail;
+  animation-range: entry 0vh cover 200vh ;
+ }
+ .social li{
+  animation: appear 3s;
+  animation-timeline: --detail;
+  animation-range: entry 0vh cover 200vh ;
+ }
+@keyframes moveR{
+  from{
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  to{
+    opacity: 1;
+  }
+
+}
+.idetail p, .idetail li{
+  animation-name: moveR;
+  animation-timeline: --detail;
+  animation-duration: 3s;
+  animation-range: entry 0vh cover 70vh ;
+}
+.serContent li{
+  animation-name: moveR;
+  animation-timeline: --detail;
+  animation-duration: 3s;
+  animation-range: entry 0vh cover 50vh ;
+}
+.getInTouch input, .getInTouch textarea, .getInTouch button{
+   animation-name: moveR;
+  animation-timeline: --detail;
+  animation-duration: 3s;
+  animation-range: entry 0vh cover 70vh ;
+}
+ .uper hr{
+   animation-name: moveR;
+  animation-timeline: --detail;
+  animation-duration: 5s;
+  animation-range: entry 0vh cover 100vh ;
+ }
+.lower h2{ 
+  animation-name: moveR;
+  animation-timeline: --detail;
+  animation-duration: 5s;
+  animation-range: entry 0vh cover 100vh ;  
 }
