@@ -1,7 +1,6 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-  // Navigation highlighting
-  const navLinks = document.querySelectorAll("nav ul li a");
+  // === NAVIGATION HIGHLIGHTING ===
+  const navLinks = document.querySelectorAll(".navlink ul li a");
   const sections = document.querySelectorAll("section");
 
   const highlightNav = () => {
@@ -23,85 +22,59 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", highlightNav);
   highlightNav();
 
-  // Gallery setup
-  const images = [
-    "asset/i1.jpg",
-    "asset/i2.jpg",
-    "asset/i3.jpg",
-    "asset/i4.jpg",
-    "asset/i5.jpg",
-    "asset/i6.jpg",
-    "asset/i7.jpg",
-    "asset/i8.jpg",
-    "asset/i9.jpg",
-    "asset/i10.jpg",
-    "asset/i11.jpg",
-  ];
+  // === HORIZONTAL SCROLL FOR .about (WHEEL + TOUCH) ===
+  const about = document.querySelector(".about");
+  let startY = 0;
+  let startX = 0;
 
-  const gallery = document.getElementById("gallery-grid");
-  let currentImageIndex = 0;
+  if (about) {
+    // Mouse Wheel to Horizontal Scroll
+    about.addEventListener("wheel", (e) => {
+      const isAtStart = about.scrollLeft <= 0;
+      const isAtEnd = about.scrollLeft + about.clientWidth >= about.scrollWidth - 1;
 
-  // Populate gallery
-  images.forEach((src, index) => {
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = `Gallery Image ${index + 1}`;
-    img.onclick = () => openLightbox(index);
-    gallery.appendChild(img);
-  });
+      if ((e.deltaY < 0 && !isAtStart) || (e.deltaY > 0 && !isAtEnd)) {
+        e.preventDefault();
+        about.scrollLeft += e.deltaY * 10;
+      }
 
-  // Lightbox functions
-  window.openLightbox = (index) => {
-    currentImageIndex = index;
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    lightboxImg.src = images[index];
-    lightbox.style.display = "flex";
-  };
+      if ((e.deltaY > 0 && isAtEnd) || (e.deltaY < 0 && isAtStart)) {
+        const currentSection = about.closest("section");
+        const next = e.deltaY > 0 ? currentSection.nextElementSibling : currentSection.previousElementSibling;
+        if (next) next.scrollIntoView({ behavior: "smooth" });
+      }
+    }, { passive: false });
 
-  window.closeLightbox = () => {
-    const lightbox = document.getElementById("lightbox");
-    lightbox.style.display = "none";
-  };
+    // Touch start: record initial position
+    about.addEventListener("touchstart", (e) => {
+      startY = e.touches[0].clientY;
+      startX = e.touches[0].clientX;
+    }, { passive: true });
 
-  window.changeImage = (direction) => {
-    currentImageIndex =
-      (currentImageIndex + direction + images.length) % images.length;
-    const lightboxImg = document.getElementById("lightbox-img");
-    lightboxImg.src = images[currentImageIndex];
-  };
-});
-document.addEventListener("DOMContentLoaded", function () {
-  const texts = ["Integrated Hill Area Upliftment Society", "IHAUS"];
+    // Touch move: vertical swipe => horizontal scroll
+    about.addEventListener("touchmove", (e) => {
+      const touchY = e.touches[0].clientY;
+      const touchX = e.touches[0].clientX;
+      const deltaY = startY - touchY;
+      const deltaX = startX - touchX;
 
-  const span = document.querySelector(".content li span");
-  let textIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let speed = 100;
+      if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        about.scrollLeft += deltaY;
+        startY = touchY;
+        e.preventDefault();
+      }
+    }, { passive: false });
 
-  function type() {
-    const currentText = texts[textIndex];
+    // Touch end: detect edge and jump section
+    about.addEventListener("touchend", () => {
+      const isAtStart = about.scrollLeft <= 0;
+      const isAtEnd = about.scrollLeft + about.clientWidth >= about.scrollWidth - 1;
 
-    if (isDeleting) {
-      charIndex--;
-      span.textContent = currentText.substring(0, charIndex);
-    } else {
-      charIndex++;
-      span.textContent = currentText.substring(0, charIndex);
-    }
-
-    if (!isDeleting && charIndex === currentText.length) {
-      setTimeout(() => (isDeleting = true), 1000); // Pause before deleting
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      textIndex = (textIndex + 1) % texts.length; // Loop to next text
-    }
-
-    setTimeout(type, isDeleting ? speed / 2 : speed);
+      if (isAtEnd || isAtStart) {
+        const currentSection = about.closest("section");
+        const next = isAtEnd ? currentSection.nextElementSibling : currentSection.previousElementSibling;
+        if (next) next.scrollIntoView({ behavior: "smooth" });
+      }
+    });
   }
-
-  // Start animation
-  type();
 });
-

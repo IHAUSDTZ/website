@@ -1,217 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IHAUS</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="asset/logo.png" type="image/x-icon">
-  <script src="js/script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IHAUS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
-
 <body>
-  <section id="home">
+  <section id="homePage" class="homePage">
+    <img src="asset/bg.png" alt="background" class="bg">
     <nav>
-       <div class="logo"><img src="asset/logo.png" alt="Logo"></div>
-      <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#detail">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
+      <div class="logo">
+        <img src="asset/logo.png" alt="logo">
+      </div>
+      <p>Integrated Hill Area Upliftment Society</p>
+      <div class="navlink">
+        <ul>
+          <li><a href="#homePage">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
-    <div class="content">
-      <li class="text"><span id="text1"></span></li>
+    <div class="homeContent">
+      <div class="homeP">
       <p>
-        Welcome to IHAUS, a society dedicated to the upliftment and
-        development of the Integrated Hill Areas in India. Our mission is to
-        promote sustainable growth, improve living standards, and enhance
-        the quality of life for the people residing in these areas.
-      </p>
+        Ready to start a new chapter? join us in this venture
+      </p><a href="#"><button>Learn More</button></a>
+      </div>
+    
+    <div class="imgContainer">
+      <img src="asset/homeImage.jpg" alt="Home Image">
     </div>
-    <div class="pic">
-      <img src="asset/homeImage.jpg" alt="image for home page">
-    </div>
-  </section>
- <section id="detail">
-    <div class="detail">
-      <h1>About Us</h1>
-      <div class="deup">
-        <img src="asset/founder1.png" alt="founder">
-      <div class="createDetail">
-        <p>The Integrated Hill Areas Upliftment Society (IHAUS) is a non-governmental organization
-          committed to the holistic economic and social development of the communities in Noney District, Manipur. Since
-          its establishment, IHAUS has been working tirelessly to promote welfare, empowerment, and sustainable
-          development in the hill areas.</p>
-      </div>
-      </div>
-      <div class="aim">
-        <div class="idetail" id="idetail_vision">
-          <h2>Vision</h2>
-          <p>To build a just, inclusive, and self-reliant society in the hill areas of Manipur where every
-            individual
-            enjoys equal opportunities for growth, development, and well-being.</p>
-        </div>
-        <div class="idetail" id="idetail_mision">
-          <h2>Mission</h2>
-          <p>To empower marginalized communities through sustainable livelihood promotion, quality education, improved
-            healthcare, environmental conservation, and capacity building, with a focus on participatory and inclusive
-            development.
-          </p>
-        </div>
-        <div class="idetail" id="idetail_key">
-          <h2>Key Areas of Focus</h2>
-          <ol>
-            <li>Rural Livelihood and Skill Development</li>
-            <li>education and Child Development</li>
-            <li>healthcare and Sanitation</li>
-            <li>Women and Youth empowerment</li>
-            <li>environmental conservation and natural resource management</li>
-            <li>Disaster Preparedness and Relief</li>
-            <li>Trbal Affairs</li>
-            </li>
-          </ol>
-        </div>
-        <button><a href="pdf/About the Organization.pdf">Read More</a></button>
-      </div>
     </div>
   </section>
-    <section id="services">
-      <h1>Services</h1>
-    <div class="serContent">
-      <div class="proposal">
-        <h2>Proposal</h2>
-        <p>This are some of the proposal</p>
-        <div class="pdf">
-          <li><a href="pdf/Concept Note.pdf">Submission of Concept Note for the Beautification of Khoupum Valley</a>
-          </li>
-        </div>
+  <section id = "about" class="about">
+       <div id="aim" class="founderDetail">
+      <div class="img">
+      <img src="asset/founder1.png" alt="Founder Image">
       </div>
-      <div class="work">
-        <h2>Our Work Done</h2>
-        <p>This are some of the work we have done</p>
-        <div class="pdf">
-          <li><a href="pdf/Village level Geo-economic.pdf">Village level Geo-economic Development through Sustainable
-              farming</a></li>
-        </div>
+      <p>The Integrated Hill Areas Upliftment Society (IHAUS) is a non-governmental organization committed to the holistic economic and social development of the communities in Noney District, Manipur. Since its establishment, IHAUS has been working tirelessly to promote welfare, empowerment, and sustainable development in the hill areas.</p>
+    </div>
+ 
+    <div class="aim">
+      <div class="aimBg">
+            <div class="aimVission">
+                 <h1 >vision</h1>
+                 <p>To build a just, inclusive, and self-reliant society in the hill areas of Manipur where every individual enjoys equal opportunities for growth, development, and well-being.</p> 
+             </div>
+       <div class="aimMission">
+          <h1>Mission</h1>
+         <p>To empower marginalized communities through sustainable livelihood promotion, quality education, improved healthcare, environmental conservation, and capacity building, with a focus on participatory and inclusive development.</p> 
+       </div>
       </div>
-      <div class="video">
-        <video src="asset/VID-20250518-WA0001.mp4" autoplay loop muted controls ></video>
+    </div>
+        <div class="key">
+      <div class="keyD">
+            <h1>Key Area of Focus</h1>
+      <ul>
+<ol>
+  <li>Rural Livelihood and Skill Development
+  
+  </li>
+  <li>Education and Child Development
+   
+  </li>
+  <li>Healthcare and Sanitation
+  
+  </li>
+  <li>Women and Youth Empowerment
+    
+  </li>
+  <li>Environmental Conservation and Natural Resource Management
+   
+  </li>
+  <li>Disaster Preparedness and Relief</li>
+</ol>
+      
       </div>
+      <div class="keyBg">
+        <p class="p1">The Integrated Hill Area Upliftment Society (IHAUS) is committed to fostering inclusive rural development through a variety of initiatives. It supports sustainable livelihoods by promoting both traditional and modern practices, complemented by entrepreneurship and vocational training programs. In the education sector, IHAUS strengthens community-based schooling, offers scholarships, and raises awareness of child rights. Healthcare and sanitation are advanced through mobile medical camps, health campaigns, and WASH (Water, Sanitation, and Hygiene) initiatives to improve community well-being.</p>
+        <p class="p2">IHAUS actively empowers women and youth through the formation of self-help groups, access to microfinance, and leadership development workshops. Environmental conservation is also a priority, with programs focused on watershed management, afforestation, and the promotion of climate-resilient practices. To ensure community safety, IHAUS conducts disaster preparedness training and delivers emergency relief during natural calamities, enhancing local resilience and response capacity.
+
+</p>
+       </div>  
+      </ul>
+    </div>
   </section>
-    <section id="gallery">
-    <h1>Gallery</h1>
+  <section class="services" id="services">
+     <div class="imgcontainer">
+        <img src="" alt="workDoneImage">
+      </div>
+    <div class="workDone">
+      <h1>WORK DONE</h1>
+       <div class="wordoneCard">
+        <div class="card">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium blanditiis beatae corrupti atque magnam minima cupiditate sunt, numquam nulla eaque repellendus porro neque iste ratione, facere accusamus tenetur nam.</p>
+        </div>
+        <div class="card">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium blanditiis beatae corrupti atque magnam minima cupiditate sunt, numquam nulla eaque repellendus porro neque iste ratione, facere accusamus tenetur nam.</p>
+        </div>
+        <div class="card">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium blanditiis beatae corrupti atque magnam minima cupiditate sunt, numquam nulla eaque repellendus porro neque iste ratione, facere accusamus tenetur nam.</p>
+        </div>
+        <div class="card">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium blanditiis beatae corrupti atque magnam minima cupiditate sunt, numquam nulla eaque repellendus porro neque iste ratione, facere accusamus tenetur nam.</p>
+        </div>
+       </div>
+    </div>
+    <div class="Future Work">
+      <h1>Future work/Proposal</h1>
+       <div class="FutureCard">
+        <div class="card">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium blanditiis beatae corrupti atque magnam minima cupiditate sunt, numquam nulla eaque repellendus porro neque iste ratione, facere accusamus tenetur nam.</p>
+        </div>
+        <div class="card">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium blanditiis beatae corrupti atque magnam minima cupiditate sunt, numquam nulla eaque repellendus porro neque iste ratione, facere accusamus tenetur nam.</p>
+        </div>
+        <div class="card">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium blanditiis beatae corrupti atque magnam minima cupiditate sunt, numquam nulla eaque repellendus porro neque iste ratione, facere accusamus tenetur nam.</p>
+        </div>
+        <div class="card">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium blanditiis beatae corrupti atque magnam minima cupiditate sunt, numquam nulla eaque repellendus porro neque iste ratione, facere accusamus tenetur nam.</p>
+        </div>
+       </div>
+    </div>
+  </section>
+  <section class="gallery" id="gallery">
+    <h1>GALLERY</h1>
     <div class="gallery-container">
-      <div class="gallery" id="gallery-grid">
-        <!-- Images will be added here via JavaScript -->
-      </div>
-    </div>
-    <div class="lightbox" id="lightbox">
-      <span class="close-btn" onclick="closeLightbox()">×</span>
-      <span class="prev-btn" onclick="changeImage(-1)">❮</span>
-      <span class="next-btn" onclick="changeImage(1)">❯</span>
-      <img id="lightbox-img" alt="Lightbox Image">
-    </div>
-  </section>
-
- <section id="contact">
-      <div class="uper">
-        <div class="getInTouch">
-          <h2>Get in Touch</h2>
-          <form id="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <input type="text" name="title" placeholder="Subject" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
-
-            <!-- Optional time field -->
-            <input type="hidden" name="time" id="form-time" />
-
-            <button type="submit">Send</button>
-          </form>
-
-          <!-- Load EmailJS SDK -->
-          <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-          <script>
-            // Initialize EmailJS with your Public Key
-            (function () {
-              emailjs.init("6NMbf23hFLlnvZBSH"); // Replace with your actual public key
-            })();
-
-            // Handle form submission
-            document
-              .getElementById("contact-form")
-              .addEventListener("submit", function (e) {
-                e.preventDefault();
-
-                // Set the current timestamp in hidden field
-                document.getElementById("form-time").value = new Date().toLocaleString();
-
-                emailjs.sendForm("service_ps5at9j", "template_vh4kfll", this).then(
-                  () => {
-                    alert("Message sent successfully!");
-                    this.reset(); // optional: clear form
-                  },
-                  (error) => {
-                    alert("Failed to send message: " + error.text);
-                  }
-                );
-              });
-
-          </script>
-        </div>
-        <div class="socialMedia">
-          <div>
-            <div class="social">
-              <ul>
-                <ul>
-                  <li><a href="https://x.com/IHAUS_DTZ" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> </li>
-                  <li><a href><i class="fa-brands fa-whatsapp"></i></a></li>
-                  <li><a href="https://www.facebook.com/profile.php?id=61577600819363" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                  <li><a href="https://www.youtube.com/channel/UC70DIt_WvXiuBTPbpg1smew" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-                  <li><a href="https://www.instagram.com/ihausdtz/"><i class="fa-brands fa-instagram" target="_blank"></i></a></li>
-                </ul>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="lower">
-          <div class="lo">
-           <h2>Aim</h2>
-            <ul>
-              <li><a href="#services">mission</a></li>
-              <li><a href="#services">vision</a></li>
-              <li><a href="#services">objective</a></li>
-              <li><a href="#services">core values</a></li>
-            </ul>
-          </div>
-          <div class="lo">
-            <h2>Information</h2>
-            <ul>
-              <li><a href="#detail">About Us</a></li>
-              <li><a href="#detail">Privacy Policy</a></li>
-              <li><a href="#detail">Terms & Conditions</a></li>
-              <li><a href="#detail">FAQ</a></li>
-            </ul>
-
-          </div>
-          <div class="lo">
-            <h2>Event</h2>
-            <ul>
-              <li><a href="new.html" target="_blank">New and Notificatoin</a></li>
-              <li><a href="new.html" target="_blank">Current Event</a></li>
-              <li><a href="new.html" target="_blank">Upcoming Event</a></li>
-              <li><a href="new.html" target="_blank">Past Event</a></li>
-            </ul>
-          </div>
+      <div class="gallery-item">
+        <img src="asset/i1.jpg" alt="Image 1">
+        <div class="picDetail">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti sit culpa eaque saepe! Explicabo architecto voluptates dolorem tempora, ipsa molestias dolores labore omnis, veniam consequuntur similique maiores iure, impedit cum?</p>
         </div>
       </div>
+      <div class="gallery-item">
+        <img src="asset/i2.jpg">
+        <div class="picDetail">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti sit culpa eaque saepe! Explicabo architecto voluptates dolorem tempora, ipsa molestias dolores labore omnis, veniam consequuntur similique maiores iure, impedit cum?</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="asset/i3.jpg" alt="Image 3">
+        <div class="picDetail">
+          <p>Lorem ipsum, dolor sit amet consectetur</p>
+      </div>
   </section>
+ <section class="contact" id="contact">
+  <h1>CONTACT</h1>
+  <div class="getInTouch">
+    <h2>Get In Touch</h2>
+    <form action="#">
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <input type="text" placeholder="Subject">
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <hr>
+  <div class="contactCard">
+    <div class="social">
+      <h2>Social</h2>
+       <ul>
+          <li><a href="https://x.com/IHAUS_DTZ" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> </li>
+          <li><a href><i class="fa-brands fa-whatsapp"></i></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61577600819363" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UC70DIt_WvXiuBTPbpg1smew" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://www.instagram.com/ihausdtz/"><i class="fa-brands fa-instagram" target="_blank"></i></a></li>
+        </ul>
+    </div>
+    <div class="address">
+      <h2>Address</h2>
+      <p>123 Main St</p>
+      <p>Anytown, USA 12345</p>
+    </div>
+    <div class="info">
+      <h2>Info</h2>
+      <p>Email: info@example.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </div>
+    <div class="event">
+      <h2>Event</h2>
+      <p>Join us for our next event!</p>
+      <p>Date: 12/31/2023</p>
+      <p>Time: 7:00 PM</p>
+    </div>
+  </div>
+ </section>
+ 
 </body>
 </html>

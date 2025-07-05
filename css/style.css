@@ -1,1186 +1,388 @@
 *{
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
-body{
-  position: relative;
-  top: 0vh;
-  left: 0%;
+html, body{
   font-family: 'Times New Roman', Times, serif;
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(201, 255, 223, 1) 42%, rgba(175, 224, 194, 1) 69%, rgba(135, 255, 183, 1) 87%, rgba(158, 255, 197, 1) 100%);
+  color: white;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
-section{
+section {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  scroll-snap-align: start;
   z-index: -1000;
 }
-  #home {
+.homePage{
   display: flex;
   flex-wrap: wrap;
   align-items: start;
 }
-nav ul {
-  display: none;
-}
-
-#home .pic {
- display: none;
-}
-nav .logo img{
-  width: 60%;
-  height: 30vh;
-  position: absolute;
-  left: 50%;
-  top: 30vh;
-  transform: translate(-50%, -50%);
-  z-index: -100;
-  border-radius: 50%;
-  opacity: 0.9;
-}
-#home p {
-  font-size: 0.8rem;
-  text-align: center;
-  width: 90%;
-  position: relative;
-  top: 15vh;
-  left: 50%;
-  transform: translate(-50%, -50%)
-}
-#home .text {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000;
-  text-transform: uppercase;
-  list-style: none;
-  text-align: center;
-  width: 90%;
-  height: 5vh;
-  position: relative;
-  top:-40vh;
-  left:5%;
-}
-
-
-.detail {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  width: 100%;
-  height: 100vh;
-}
-#detail h1 {
-  width: fit-content;
-  position: relative;
-  top: 0vh;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000;
-  text-transform: uppercase;
-}
-.deup img {
-  width: 20%;
-  height: 10vh;
-  position: relative;
-  top: 0vh;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  border-radius: 50%;
-}
-.detail .createDetail {
-  color: #000000;
-  position: relative;
-  top: 0vh;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 80%;
-  height: 20vh;
-}
-.detail .createDetail p {
-  font-size: 0.9rem;
-  text-align: center;
-}
-.detail .aim {
-  overflow: scroll;
-  scrollbar-width: none;        
-  -ms-overflow-style: none; 
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  color: #000000;
-  width: 100%;
-  height: 60vh;
-  position: relative;
-  top: 0vh;
-  left: 0%;
-  gap: 1vh;
-}
-
-.aim .idetail h2 {
-  height: fit-content;
-  width: fit-content;
-  font-size: 1.2rem;
-  position: relative;
-  top: 0vh;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
-.aim .idetail p {
-  width: 100%;
-  height: fit-content;
-  font-size: 0.8rem;
-  text-align: center;
-}
-.aim .idetail ol {
-  width: 100%;
-  text-align: center;
-}
-#idetail_key li{
-  padding: 3px;
-  text-align: left;
-  position: relative;
-  top: 0vh;
-  left: 10%;
-  font-size: 0.8rem;
-}
-.aim button {
-  height: 3vh;
-  width: 30%;
-  position: relative;
-  top: 0vh;
-  left: 50%;
-  border-radius: 50px;
-  transform: translate(-50%, -50%);
-  background: transparent;
-}
-.aim button a {
-  width: 100%;
-  text-decoration: none;
-  color: #000000;
-  font-size: .8rem;
-}
-.aim button:hover {
-  background: transparent;
-}
-.aim button:hover a {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 0.1rem;
-  display: inline-block;
-  border-radius: 50px;
-  transition: ease-in-out .4s;
-}
-#services h1 {
-  text-transform: uppercase;
-  font-weight: 600;
-  width: fit-content;
-  font-size: 1rem;
-  position: relative;
-  top: 0vh;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
-.serContent {
-  overflow: scroll;
-   scrollbar-width: none;        
-  -ms-overflow-style: none; 
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  position: relative;
-}
-.serContent .proposal {
-  width: 100%;
-  height: 20vh;
-  position: relative;
-}
-.serContent .work {
-  width: 100%;
-  height: 20vh;
-  position: relative;
-  top: 0vh;
-}
-.serContent h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000;
-  text-transform: uppercase;
-  text-align: center;
-}
-.serContent p {
-  text-align: center;
-  font-size: 0.8rem;
-  width: 100%;
-  color: #000000;
-  position: relative;
-}
-
-.serContent .pdf {
-  width: 100%;
-}
-.serContent li {
-  list-style: none;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  top: 4vh;
-}
-.serContent a {
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  display: block;
-  width: 80%;
-  color: #000000;
-  box-shadow: 0 2px 6px #000000;
-}
-.serContent a:hover {
-  background: #818682;
-  color: #fff;
-  width: 80%;
-  height: 100%;
-}
-.video{
-  display: flex;
-  width: 80%;
-  height: 30vh;
-  position: relative;
-  top: 0vh;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0px 0px 30px #5f943c;
-}
-.video video{
-  object-fit: cover;
+.bg{
   width: 100%;
   height: 100%;
+  opacity: 0.7;
+  z-index: -1000;
 }
-#gallery h1 {
-  text-transform: uppercase;
-  font-weight: 600;
-  width: fit-content;
-  font-size: 1rem;
-  position: relative;
-  top: 0vh;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
-.gallery-container {
-  max-width: 90%;
-  height: 80vh;
-  position: relative;
-  top: 50vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: scroll;
-  white-space: nowrap;
-  scrollbar-width: none;
-   -ms-overflow-style: none;
-    border-color: rgb(51, 114, 59);
-  border-style: solid;
-  box-shadow: 0px 0px 40px rgba(122, 163, 95, 0.5);
-  /* Hide scrollbar for IE and Edge */
-}
-.gallery {
-  gap: 4px;
-  padding: 1px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
-}
-.gallery img {
-  width: 100%;
-  height: 20vh;
-  object-fit: cover;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: transform 0.3s;
-  /* Added for performance */
-}
-.gallery img:hover {
-  transform: scale(1.1);
-}
-.lightbox {
-  display: none;
+nav{
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-}
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  border-radius: 5px;
-}
-.close-btn,
-.prev-btn,
-.next-btn {
-  position: absolute;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
-}
-.close-btn {
-  top: 1rem;
-  right: 1rem;
-}
-
-.prev-btn {
-  left: 1rem;
-}
-.next-btn {
-  right: 1rem;
-}
-.close-btn:hover,
-.prev-btn:hover,
-.next-btn:hover {
-  color: #ffffff;
-}
-.getInTouch {
-  width: 90%;
-  height: 35vh;
-  position: relative;
-  top: 1vh;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-.getInTouch h2 {
-  color: #000000;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.getInTouch input,
-.getInTouch textarea {
-  position: relative;
-  left: 2.5%;
-  width: 90%;
-  padding: 0.5rem;
-  margin: 0.1rem ;
-  border-radius: 5px;
-  border: 1px solid #ffffff;
-  height: 2vh;
-}
-
-.getInTouch button {
-  height: 5vh;
-  padding: 0.5rem .5rem;
-  background-color: #ffffff;
-  border: none;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  position: relative;
-  left: 2.5%;
-}
-.socialMedia {
-  position: relative;
-  top: 6vh;
-  width: 100%;
-  height: fit-content;
-}
-.socialMedia ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  width: 100%;
-
-}
-.socialMedia ul li {
-  position: relative;
-  top: 0vh;
-  left: 10%;
-  list-style: none;
-  padding: 5%;
-  transition: transform 0.6s ease-in-out;
-}
-.socialMedia ul li a {
-  text-decoration: none;
-  color: #000000;
-  box-shadow: #a87a7a 0px 0px 10px;
-}
-.socialMedia ul li:hover {
-  transform: scale(2);
-  transition: transform 0.2s ease-out;
-}
-
-.socialMedia ul li a:hover {
-  color: #ffffff;
-  box-shadow: #ffffff 0px 0px 20px;
-  cursor: pointer;
-  text-shadow: #ffffff 0px 0px 10px;
-}
-.uper hr {
-  position: relative;
-  top: 10vh;
-  width: 100%;
-  height: 1px;
-  background: #ffffff;
-}
-.lower {
-  width: 100%;
-  height: 50vh;
-}
-.lower .lo {
-  padding-top: 2%;
-  margin-left: 1%;
-  margin-right: 2%;
-  width: 30%;
-  height: 40vh;
-  float: left;
-  align-content: center;
-}
-.lower h2 {
-  color: #000000;
-  text-align: center;
-  margin-bottom: .8rem;
-}
-.lower ul li {
-  list-style: none;
-  padding: 1%;
-  text-align: center;
-  color: #ffffff;
-  font-size: 0.7rem;
-  font-weight: 600;
-}
-.lower ul li a{
-  text-decoration: none;
-  color: #000000;
-}
-.lower li:hover {
-   transform: scale(1.2);
-  transition: transform 0.2s ease-out;
-}
-@media screen and (min-width: 700px) {
-nav {
-  position: fixed;
+  background: transparent;
   width: 100%;
   height: 10vh;
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
   align-items: start;
-  z-index: 1000;
 }
 nav .logo{
- width: 10%;
- height: 8vh;
- position: relative;
- top: 1vh;
- left: 1%;
+  width: 5%;
+  height: 80%;
+  position: relative;
+  top: 10%;
+  left: 2%;
 }
-nav .logo img {
+nav .logo img{
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+nav p{
+  width: 15%;
+  height: auto;
   position: relative;
-  top:  50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
-}
-nav ul {
-  position: relative;
-  left: 5%;
-  display: flex;
-  list-style: none;
-  padding: 0%;
-  margin: 0%;
-  width: 80%;
-  position: relative;
-}
-nav ul li { 
-  padding: 3%;
-  font-size: 1.2rem;
-}
-nav ul li a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: 600;
-}
-nav ul li a.active {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  border-radius: 20px;
-  padding: 0.1rem 0.8rem;
-  display: inline-block;
-}
-#home .text {
-  display: flex;
-  width: 50%;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #000000;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%,-50%);
+  font-size: 1rem;
+  text-align: center;
   text-transform: uppercase;
+}
+.navlink{
+  width: fit-content;
+  height: 100%;
+  position: relative;
+  left: 25%;
+}
+.navlink ul{
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
   list-style: none;
   position: relative;
-  top: 30vh;
-  left: 46%;
-  transform: translate(-90%, -50%);
-  height: 10vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
-#home p {
+.navlink  ul li{
+  margin: 0.7rem 2rem;
+  position: relative;
+}
+.navlink ul li a {
+  text-decoration: none;
+  color: white;
   font-size: 1.2rem;
-  color: #000000;
-  width: 40%;
-  height: fit-content;
+  font-weight: 500;
   position: relative;
-  top: 50vh;
-  left: 42%;
-  transform: translate(-100%, -50%);
-  box-shadow: 0px 0px 30px #527e35;
-  border-radius: 10px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transform-origin: left;
+  transition: all 0.3s ease;
+  border-radius: 20px;
 }
-#home .pic {
-  display: flex;
+.navlink ul li a.active,
+.navlink ul li a:hover {
+  background: white;
+  color: #1889bd;
+  border-radius: 5px;
+  border-radius: 20px;
+  transform: scale(1.1);  
+}
+.homeContent{
   width: 100%;
-  height: 100vh;
+  height: 90vh;
+  position: absolute;
+  top: 10vh;
+}
+.homeP{
+  background-color: rgb(255, 255, 255);
+  width: 40%;
+  height: 30vh;
   position: relative;
-  top: -10vh;
-  left: 52%;
-  transform: rotate(30deg);
+  top: 60%;
+  left: 1%;
+  transform: translate(0%,-50%);
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
+}
+.homeP p{
+  color: black;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%,-50%)
+}
+.homeP button{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%,-50%);
+  border: 2px solid black;
+  padding: 10px;
+  transform: translate(-50%, -50%) scale(1); 
+  transition: transform 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s;
+}
+.homeP button:hover{
+  transform: translate(-50%,-50%) scale(1.2);
+  transition: 0.5s;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
+}
+.imgContainer{
+  background-color: transparent;
+  position: relative;
+  top: 10vh;
+  left: 75%;
+  transform: translate(-40%,-50%);
+  width: 30%;
+  height: 50vh;
+  transform: translate(-50%, -50%) scale(1); /* Default scale */
+  transition: transform 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s;
+}
+.imgContainer img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
+}
+.imgContainer:hover{
+  transform: translate(-50%,-50%) scale(1.1);
+  transition: 0.5s;
+}
+.about {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  height: 100vh;
+  width: 100vw;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+   -webkit-overflow-scrolling: touch;
+}
+.about::-webkit-scrollbar {
+  display: none;
+}
+.about > div {
+  flex: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(47, 47, 47);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  scroll-snap-align: start;
   overflow: hidden;
   z-index: -100;
 }
-#home .pic img {
-  transform: rotate(-30deg);
-  width: 100%;
-  height: 50vh;
-  position: relative;
-  top: 12vh;
-  left: -20%;
-  z-index: -100;
-  border-radius: 10px;
-  box-shadow:  10px 10px 10px rgba(178, 216, 173, 0.5);
-}
-.detail {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  width: 100%;
-  height: 100vh;
-}
-#detail h1 {
-  width: fit-content;
-  position: relative;
-  top: 50%;
-  left: -7%;
-  transform: translate(-50%, -50%);
-  transform: rotate(90deg);
-  font-size: 2rem;
-  font-weight: 600;
-  color: #000000;
-  text-transform: uppercase;
-}
-.deup{
-  width: 100%;
-  height: 20vh;
-
-}
-.deup img{
-  width: 20%;
-  height: 13vh;
-  position: relative;
-  border-radius: 50%;
-  top: 0vh;
-  left: 80%;
-  box-shadow: 0px 0px 20px #96da90;
-}
-.detail .createDetail {
-  color: #000000;
-  position: relative;
-  top: -4vh;
-  left: 40%;
-  width: 50%;
-  height: fit-content;
-  transform: translate(-50%, -50%);
-}
-.detail .createDetail p {
-  font-size: 1.2rem;
-  text-align: center;
-  position: relative;
-}
-.detail .aim {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  gap: 10px;
-  color: #000000;
-  width: 90%;
-  height: 50vh;
-  position: relative;
-  top: 0vh;
-  left: 7%;
-  overflow: unset;
-}
-.aim .idetail {
-  width: 30%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-}
-.aim .idetail h2 {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 50%);
-}
-.aim .idetail p {
-  width: 90%;
-  height: fit-content;
-  font-size: 1rem;
-  text-align: center;
-  position: relative;
-  top: 15vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.aim .idetail ol {
-  width: 90%;
-  height: fit-content;
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 3px;
-  position: relative;
-  top: 15vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.aim button {
-  height: 5vh;
-  width: 30%;
-  position: relative;
-  top: 0vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: transparent;
-}
-.aim button a {
-  width: 100%;
-  text-decoration: none;
-  color: #000000;
-  font-size: 1.5rem;
-}
-
-.aim button:hover {
-  background: transparent;
-  
-}
-.aim button:hover a {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  display: inline-block;
-}
-#services h1 {
-  width: fit-content;
-  position: relative;
-  top: 50%;
-  left: -7%;
-  transform: translate(-50%, -50%);
-  transform: rotate(90deg);
-  font-size: 2rem;
-  font-weight: 600;
-  color: #000000;
-  text-transform: uppercase;
-}
-.serContent {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-}
-.serContent .proposal {
-  width: 45%;
-  height: 10vh; 
-  top: 5vh;
-}
-.serContent .work {
-  width: 45%;
-  height: 10vh; 
-  top: 5vh;
-}
-.serContent h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 2rem;
-  position: relative;
-  top: 0vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: fit-content;
-   box-shadow: 0px 0px 30px #5f943c;
-}
-.serContent p {
- 
-  font-size: 1rem;
-  width: 100%;
-  color: #000000;
-  position: relative;
-  top: 1vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.serContent .pdf {
-  width: 100%;
-  height: 70vh;
-  position: relative;
-  top: 1vh;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
-
-.serContent a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  display: block;
-  color: #000000;
-  margin: 8px;
-  margin-bottom: 5%;
-  padding: 7px;
-  box-shadow: 0 2px 6px #000000;
-}
-.serContent a:hover {
-  background: #818682;
-  color: #fff;
-  width: 80%;
-  height: 100%;
-}
-#gallery h1{
-  width: fit-content;
-  position: relative;
-  top: 50%;
-  left: -7%;
-  transform: translate(-50%, -50%);
-  transform: rotate(90deg);
-  font-size: 2rem;
-  font-weight: 600;
-  color: #000000;
-  text-transform: uppercase;
-}
-.gallery-container {
-  position: relative;
-  left: 51%;
-  max-width: 90%;
-  height: 80vh;
-  position: relative;
-  overflow: scroll;
-  white-space: nowrap;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.gallery {
-  gap: 1px;
-  padding: 1px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-}
-.gallery img:hover {
-  transform: scale(1.2);
-}
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-}
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  border-radius: 5px;
-}
-
-.close-btn,
-.prev-btn,
-.next-btn {
-  position: absolute;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
-}
-.close-btn {
-  top: 1rem;
-  right: 1rem;
-}
-.prev-btn {
-  left: 1rem;
-}
-.next-btn {
-  right: 1rem;
-}
-.close-btn:hover,
-.prev-btn:hover,
-.next-btn:hover {
-  color: #ffffff;
-}
-#contact .uper {
-  position: relative;
-  top: 10vh;
-  left: 0%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  width: 100%;
-  height: 50vh;
-}
-.getInTouch {
-  position: relative;
-  left: 25%;
-  width: 50%;
+.founderDetail .img{
+  width: 30vw;
   height: 40vh;
-  border-radius: 10px;
-}
-.getInTouch h2 {
-  color: #000000;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.getInTouch input,
-.getInTouch textarea {
-  width: 90%;
-  padding: 0.75rem;
-  margin: 0.5rem 0;
-  border-radius: 5px;
-  border: 1px solid #ffffff;
-}
-.getInTouch button {
-  padding: 0.5rem 1rem;
-  background-color: #ffffff;
-  border: none;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.socialMedia {
-  width: 50%;
-  height: 40vh;
-}
-.socialMedia ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  width: 100%;
-  height: 40vh;
-}
-.socialMedia ul li {
-  list-style: none;
   position: relative;
-  top: 30%;
+  top: 50vh;
   left: 20%;
   transform: translate(-50%, -50%);
-  transition: transform 0.6s ease-in-out;
 }
-.socialMedia ul li a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 1.4rem;
-  box-shadow: #ffffff 0px 0px 10px;
+.img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 30%;
+  object-position: center;
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
+  transform: scale(1); 
+  transition: transform 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s;
 }
-
-.socialMedia ul li:hover {
-  transform: translate(-50%, -50%) scale(2);
-  transition: transform 0.2s ease-out;
-}
-.socialMedia ul li a:hover {
-  color: #ffffff;
-  box-shadow: #ffffff 0px 0px 20px;
+.img img:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+  background-color: black;
+  color: white;
   cursor: pointer;
-  text-shadow: #ffffff 0px 0px 10px;
+  border: 2px solid white;
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
 }
-#contact hr {
-  position: relative;
-  top: 0vh;
-  width: 100%;
-  height: 1px;
-  background: #ffffff;
-}
-.lower {
-  width: 100%;
-  height: 50vh;
-  position: relative;
-  top: 0vh;
-}
-.lower .lo {
-  width: 30%;
-  height: 40vh;
-  float: left;
-  position: relative;
-  top: 1vh;
-  left: 1%;
-}
-.lower ul {
-  width: 100%;
-  height: 80%;
-}
-.lower ul li {
-  list-style: none;
-  padding: 1%;
+.founderDetail p{
+  width: 40vw;
+  max-height:80vh ;
   text-align: center;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
-} 
-
-}
-
-@media screen and (min-width: 1000px){
-#detail h1, #services h1, #gallery h1{
-  left: -5%;
-}
-  nav ul{
-    left: 20%;
-  }
-  #home p {
+  font-size: 1.5rem;
+  font-weight: 500;
   position: relative;
-  top: 40vh;
-  left: 42%;
-  transform: translate(-100%, -50%);
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -50%);
+  padding: 1rem;
+  border-radius: 1rem;
 }
-  #home .pic img {
+.aimBg{
+ background: black;
+ height: 160vh;
+ width: 60%;
+ transform: rotate(30deg);
+ position: relative;
+ top: -39vh;
+ left: -10%;
+ z-index: -100;
+}
+.aimVission h1{
+color: white;
+ transform: rotate(-30deg); 
+ position: relative;
+ left: 40%;
+ top: 30vh;
+ font-size: 3rem;
+ text-transform: uppercase;
+}
+.aimVission p{
+  width: 50%;
+  color: white;
   transform: rotate(-30deg);
-  width: 100%;
-  height: 50vh;
   position: relative;
-  top: 40vh;
-  left: -30%;
+  left: 40%;
+  top: 70vh;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
 }
-.deup img{
-  width: 10%;
-  height: 13vh;
+.aimMission{
+  
+  z-index: 100;
   position: relative;
-  border-radius: 50%;
-  top: 0vh;
-  left: 80%;
-  box-shadow: 0px 0px 20px #96da90;
+  top: -33vh;
+  left: 55vw;
+  transform: rotate(-30deg);
+  width: 50vw;
+  height: 100vh;
 }
-.serContent .video{
-  width: 45%;
+.aimMission h1{
+  color: white;
+ 
+ position: relative;
+ left: 40%;
+ top: 80vh;
+ font-size: 3rem;
+ text-transform: uppercase;
 }
+.aimMission p{
+  width: 50%;
+  color: white;
+  position: relative;
+  left: 30%;
+  top: 30vh;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
 }
-@media  screen and (min-width: 1440px){
-#detail h1, #services h1, #gallery h1{
-  left: -4%;
+.keyD{
+  background-color: transparent;
+  width: 50vw;
+  height: 100vh;
+  z-index: -10;
 }
+.keyBg{
+  background-color: #000000;
+  width: 100vw;
+  height: 150vh;
+  position: relative;
+  top: -160vh;
+  left: 50vw;
+  transform: rotate(150deg);
+  z-index: -1000;
 }
-section{
-view-timeline-name: --detail;
-view-timeline-axis: block;
+.keyD h1{
+  color: white;
+  position: relative;
+  top: 20vh;
+  left: 10vw;
+  text-transform: uppercase;
+  z-index: 1;
 }
-@keyframes MoveDown {
-  0%{
-    opacity: 0;
-    top:-40vh;
-    scale: 0.2;
-  }
-  20%{
-    opacity: 0.2;
-    scale: 0.4;
-  }
-  40%{
-    opacity: 0.4;  
-    scale: 0.6;
-  }
-  60%{
-    opacity: 0.6;   
-    scale: 0.8;
-  }
-  80%{
-    opacity: 0.8;
-    scale: 1;
-  }
-  100%{
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-.detail h1, #services h1, #gallery h1{
- animation-name: MoveDown;
-  animation-timeline: --detail;
-  animation-duration: 1s;
-  animation-range: entry 0% cover 50%;
-}
-
-@keyframes fadeIN {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-#home .content li {
-  animation: fadeIN 3s ease-in-out forwards;
-  animation-delay: 0s;
-  opacity: 0;
-  visibility: hidden;
-}
-#home .content p {
-  animation: fadeIN 3s ease-in-out forwards;
-  animation-delay: 2s; /* starts after li finishes */
-  opacity: 0;
-  visibility: hidden;
-}
-#home .pic {
-  animation: fadeIN 3s ease-in forwards;
-  animation-delay: 3s; /* starts after p finishes */
-  opacity: 0;
-  visibility: hidden;
-}
-
-#home nav {
-  animation: fadeIN 3s ease-in-out forwards;
-  animation-delay: 5s; /* starts after pic finishes */
-  opacity: 0;
-  visibility: hidden;
-}
-
-@keyframes scale {
-  from{
-    scale: 0;
-    opacity: o;
-  }
-  to{
-    opacity: 1;
-    scale: 1;
-  }
-}
-.detail .createDetail p{
-  animation-name: scale;
-  animation-timeline: --detail;
-  animation-duration: 3s;
-  animation-range: entry 0vh cover 70vh ;
-}
-.serContent h2{
-  animation-name: scale;
-  animation-timeline: --detail;
-  animation-duration: 3s;
-  animation-range: entry 0vh cover 70vh ;
-}
-.lower li{
-  animation-name: scale;
-  animation-timeline: --detail;
-  animation-duration: 3s;
-  animation-range: entry 0vh cover 100vh ;
-}
-@keyframes appear{
- from{
-  opacity: 0;
- }
- to{
-  opacity: 1;
- }
-}
-
-.detail img{
-  animation: appear 5s;
-  animation-timeline: --detail;
-  animation-range: entry 0vh cover 70vh ;
-}
-.idetail h2{
-  animation: appear 5s;
-  animation-timeline: --detail;
-  animation-range: entry 0vh cover 70vh ;
-}
- .aim button{
-  animation: appear 5s;
-  animation-timeline: --detail;
-  animation-range: entry 0vh cover 180vh ;
-
- }
- .serContent p{
-  animation: appear 5s;
-  animation-timeline: --detail;
-  animation-range: entry 0vh cover 50vh ;
- }
- .serContent video{
-  animation: appear 3s;
-  animation-timeline: --detail;
-  animation-range: entry 0vh cover 160vh ;
- }
- .gallery-container{
-  animation: appear 3s;
-  animation-timeline: --detail;
-  animation-range: entry 0vh cover 100vh ;
- }
- .getInTouch h2{
-  animation: appear 3s;
-  animation-timeline: --detail;
-  animation-range: entry 0vh cover 200vh ;
- }
- .social li{
-  animation: appear 3s;
-  animation-timeline: --detail;
-  animation-range: entry 0vh cover 200vh ;
- }
-@keyframes moveR{
-  from{
-    opacity: 0;
-    transform: translateX(-100vw);
-  }
-  to{
-    opacity: 1;
-  }
+.key ul{
+  position: relative;
+  top: 30vh;
+  left:10vw;
+  z-index: 1;
 
 }
-.idetail p, .idetail li{
-  animation-name: moveR;
-  animation-timeline: --detail;
-  animation-duration: 3s;
-  animation-range: entry 0vh cover 70vh ;
+.key ul li{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem 0;
 }
-.serContent li{
-  animation-name: moveR;
-  animation-timeline: --detail;
-  animation-duration: 3s;
-  animation-range: entry 0vh cover 50vh ;
+.keyBg .p1{
+  transform: rotate(-150deg);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 45vw;
+  position: relative;
+  top: 80vh;
+  left: 52vw;
+
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 1rem;
+  z-index: 1;
 }
-.getInTouch input, .getInTouch textarea, .getInTouch button{
-   animation-name: moveR;
-  animation-timeline: --detail;
-  animation-duration: 3s;
-  animation-range: entry 0vh cover 70vh ;
+.keyBg .p2{
+  transform: rotate(-150deg);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 30vw;
+  position: relative;
+  top: 20vh;
+  left: 65vw;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 1rem;
+  z-index: 1;
+
 }
- .uper hr{
-   animation-name: moveR;
-  animation-timeline: --detail;
-  animation-duration: 5s;
-  animation-range: entry 0vh cover 100vh ;
- }
-.lower h2{ 
-  animation-name: moveR;
-  animation-timeline: --detail;
-  animation-duration: 5s;
-  animation-range: entry 0vh cover 100vh ;  
+.keyBg p{
+  z-index: 1000;
+  align-items: center;
+  text-align: center;
+  }
+
+@media screen and (max-width: 1200px) {
+
+.navlink  ul li{
+  margin: 0.7rem 1rem;
+}
+.navlink ul li a {
+  font-size: 1rem;
+}
+ .homeP p{
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
 }
