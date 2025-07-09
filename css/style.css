@@ -6,35 +6,36 @@
 html, body{
   font-family: 'Times New Roman', Times, serif;
   color: white;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 section {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
-  scroll-snap-align: start;
-  z-index: -1000;
 }
 .homePage{
   display: flex;
   flex-wrap: wrap;
   align-items: start;
+  overflow: hidden;
 }
 .bg{
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
-  z-index: -1000;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  z-index: -1;
 }
-nav{
-  position: fixed;
-  background: transparent;
-  width: 100%;
-  height: 10vh;
+header{
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
   align-items: start;
+  width: 100%;
+  height: 10vh;
+}
+nav{
+  background: transparent;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 nav .logo{
   width: 5%;
@@ -50,70 +51,60 @@ nav .logo img{
 }
 nav p{
   width: 15%;
-  height: auto;
+  height: 80%;
   position: relative;
-  top: 50%;
-  left: 10%;
-  transform: translate(-50%,-50%);
+  top: 10%;
+  left: 3%;  
   font-size: 1rem;
-  text-align: center;
   text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.3rem;
+  padding-top: 1%;
 }
 .navlink{
-  width: fit-content;
+  width: 50%;
   height: 100%;
   position: relative;
-  left: 25%;
+  left: 30%;
 }
 .navlink ul{
   width: fit-content;
   display: flex;
   flex-wrap: wrap;
   align-items: start;
-  list-style: none;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
 .navlink  ul li{
-  margin: 0.7rem 2rem;
-  position: relative;
+  list-style: none;
 }
 .navlink ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 500;
-  position: relative;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  transform-origin: left;
-  transition: all 0.3s ease;
-  border-radius: 20px;
+ text-decoration: none;
+ color: #ffffff;
+ font-size: 1.2rem;
+ font-weight: 500;
+ padding: 0 1.2rem;
+ transition: all 0.3s ease;
+
 }
 .navlink ul li a.active,
 .navlink ul li a:hover {
   background: white;
+  padding: 0.5rem 1rem;
   color: #1889bd;
   border-radius: 5px;
   border-radius: 20px;
   transform: scale(1.1);  
-}
-.homeContent{
-  width: 100%;
-  height: 90vh;
-  position: absolute;
-  top: 10vh;
 }
 .homeP{
   background-color: rgb(255, 255, 255);
   width: 40%;
   height: 30vh;
   position: relative;
-  top: 60%;
-  left: 1%;
-  transform: translate(0%,-50%);
+  top: -50vh;
+  left: 10vw;
   box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
 }
 .homeP p{
@@ -157,10 +148,10 @@ nav p{
 .imgContainer{
   background-color: transparent;
   position: relative;
-  top: 10vh;
-  left: 75%;
+  top: -80vh;
+  left: 70vw;
   transform: translate(-40%,-50%);
-  width: 30%;
+  width: 50%;
   height: 50vh;
   transform: translate(-50%, -50%) scale(1); /* Default scale */
   transition: transform 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s;
@@ -186,6 +177,7 @@ nav p{
   -ms-overflow-style: none;
    -webkit-overflow-scrolling: touch;
 }
+
 .about::-webkit-scrollbar {
   display: none;
 }
@@ -202,11 +194,11 @@ nav p{
   z-index: -100;
 }
 .founderDetail .img{
-  width: 30vw;
-  height: 40vh;
+  width: 20vw;
+  height: 30vh;
   position: relative;
-  top: 50vh;
-  left: 20%;
+  top: 20vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
 }
 .img img{
@@ -228,161 +220,517 @@ nav p{
   box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
 }
 .founderDetail p{
-  width: 40vw;
+  width: 70vw;
   max-height:80vh ;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 500;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-90%, -50%);
+  top: 50vh;
+  left: 30vw;
+  transform: translate(-50%, -50%);
   padding: 1rem;
   border-radius: 1rem;
 }
+.aim{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+.aimBG{
+  width: 60vw;
+  height: 100vh;
+  overflow: hidden;
+
+}
 .aimBg{
- background: black;
- height: 160vh;
- width: 60%;
- transform: rotate(30deg);
- position: relative;
- top: -39vh;
- left: -10%;
- z-index: -100;
-}
-.aimVission h1{
-color: white;
- transform: rotate(-30deg); 
- position: relative;
- left: 40%;
- top: 30vh;
- font-size: 3rem;
- text-transform: uppercase;
-}
-.aimVission p{
-  width: 50%;
-  color: white;
-  transform: rotate(-30deg);
+  height: 200vh;
+  width: 100vw;
+  transform: rotate(30deg);
+  background-color: black;
   position: relative;
-  left: 40%;
-  top: 70vh;
+  top: -100vh;
+  left: -48vw;
+  z-index: -1
+
+}
+.aimBG h1, .aimBG p{
+  transform: rotate(-30deg);
+  color: white;
+}
+.aimBg h1{
+  color: black;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  top: 130vh;
+  left: 80vw;
+  text-transform: uppercase;
+  font-size: 2rem;
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5);
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding: 10px;
+  transform: translate(-50%, -50%) scale(1) rotate(-30deg); 
+  transition: transform 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s;
+}
+.aimBg h1:hover{
+  transform: translate(-50%,-50%) scale(1.2);
+  transition: 0.5s;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
+}
+.aimBg p{
+ position: relative;
+  color: white;
+  top: 100vh;
+  left: 60vw;
+  width: 40vw;
+  height: fit-content;
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
 }
 .aimMission{
-  
-  z-index: 100;
-  position: relative;
-  top: -33vh;
-  left: 55vw;
-  transform: rotate(-30deg);
-  width: 50vw;
+  width: 40vw;
   height: 100vh;
 }
+
 .aimMission h1{
-  color: white;
- 
+color: white;
  position: relative;
  left: 40%;
- top: 80vh;
+ top: 20vh;
  font-size: 3rem;
  text-transform: uppercase;
 }
 .aimMission p{
-  width: 50%;
+  width: 40vw;
   color: white;
   position: relative;
-  left: 30%;
-  top: 30vh;
+  left: -5%;
+  top: 35vh;
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
 }
+.key{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
 .keyD{
-  background-color: transparent;
   width: 50vw;
   height: 100vh;
-  z-index: -10;
-}
-.keyBg{
-  background-color: #000000;
-  width: 100vw;
-  height: 150vh;
-  position: relative;
-  top: -160vh;
-  left: 50vw;
-  transform: rotate(150deg);
-  z-index: -1000;
+  
 }
 .keyD h1{
   color: white;
   position: relative;
-  top: 20vh;
-  left: 10vw;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  width: 40vw;
+  height: fit-content;
   text-transform: uppercase;
   z-index: 1;
 }
-.key ul{
+.keyD ol{
+  height: 80vh;
   position: relative;
-  top: 30vh;
-  left:10vw;
-  z-index: 1;
-
+  top: 20vh;
 }
-.key ul li{
+.keyD ol li{
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  margin: 1rem 0;
+  text-align: left;
+  width: 40vw;
+  position: relative;
+  top: 10%;
+  left: 20%;
+  padding: 1rem;
+}
+.keyBg{
+  background-color: black;
+  overflow: hidden;
+  width: 100vw;
+  height: 150vh;
+  transform: rotate(150deg);
+  position: relative;
+  top: -160vh;
+  left: 50vw;
+}
+.keyDetail{
+ transform: rotate(-150deg);
+ width: 60vw;
+ height: 100vh;
+ position: relative;
+ top: 20vh;
+ left: 50vw;
 }
 .keyBg .p1{
-  transform: rotate(-150deg);
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  width: 45vw;
+  text-align: center;
   position: relative;
-  top: 80vh;
-  left: 52vw;
-
+  top: 20vh;
+  left: 10vw;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 40vw;
   color: rgb(255, 255, 255);
   padding: 1rem;
   border-radius: 1rem;
   z-index: 1;
 }
 .keyBg .p2{
-  transform: rotate(-150deg);
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  width: 30vw;
+  text-align: center;
   position: relative;
   top: 20vh;
-  left: 65vw;
+  left: 11vw;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 40vw;
   color: rgb(255, 255, 255);
   padding: 1rem;
   border-radius: 1rem;
   z-index: 1;
-
 }
-.keyBg p{
-  z-index: 1000;
-  align-items: center;
+.services{
+  width: 100vw;
+  height: 100vh;
+  color:black;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+.services h1{
   text-align: center;
-  }
-
-@media screen and (max-width: 1200px) {
-
-.navlink  ul li{
-  margin: 0.7rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transform: translate(-50%, -50%) rotate(90deg);
+  position: relative;
+  top: 50vh;
+  left: 1vw;
+  width: fit-content;
+  height: fit-content;
 }
-.navlink ul li a {
+.serviceContent{
+  width: 90vw;
+  height: 100vh;
+  position: relative;
+  left: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none ;
+}
+.serviceContent .video{
+  width: 30vw;
+  height: 30vh;
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+.service1{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+.serviceContent .video video{
+  width: 100%;
+  height: 100%;
+}
+.serviceContent .service1P{
+  width: 40vw;
+  max-height: 50vh;
   font-size: 1rem;
-}
- .homeP p{
-  color: black;
-  font-size: 1.5rem;
   font-weight: 500;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  padding: 1rem;
+  text-align: justify;
 }
+.service2{
+ display: flex;
+ flex-wrap: wrap ;
+ align-items: start;
+}
+.service2 .image{
+  width: 30vw;
+  height: 20vw;
+}
+.service2 .image img{
+  height: 100%;
+  width: 100%;
+}
+
+.service2 .service2P{
+  width: 50vw;
+  max-height: 50vh;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  padding: 1rem;
+  text-align: justify;
+}
+.gallery{
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  width: 100vw;
+  height: 100vh;
+}
+.gallery h1 {
+  color: white;
+  background-color: black;
+  width: 100vw;
+  height: 10vh;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;     
+  justify-content: center;
+  font-size: 2rem;
+}
+.gallery-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.gallery img {
+ height: 50vh;
+ width: 40vw;
+ transition: transform 0.4s, opacity 0.4s;
+ border-radius: 10px;
+}
+.gallery .prev,
+.gallery .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-25vh);
+  opacity: 0.6;
+  height: 50vh;
+  width: 50vw;
+  cursor: pointer;
+}
+.gallery .prev {
+  left: 15vw;
+}
+.gallery .next {
+  right: 15vw;
+}
+.gallery .current {
+  opacity: 1;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+.description {
+  position: relative;
+  top: -10vh;
+  margin-top: 20px;
+  width: 40vw;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #000000;
+  white-space: pre-line;
+}
+.nav-button {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(50, 50, 50, 0.8);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition:  0.3s;
+  z-index: 3;
+}
+.nav-button:hover {
+  background: rgba(100, 100, 100, 0.9);
+}
+#prevBtn {
+  left: 90vw;
+  transform: rotate(180deg);
+}   
+#nextBtn {
+  right: 90vw;
+  transform: rotate(180deg);
+}
+.contact{
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+.upper{
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+.gmail{
+  width: 50vw;
+  height: 50vh;
+  background-color: antiquewhite;
+  
+
+}
+.upper h2{
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  text-align: center;
+}
+.upper form {
+  width: 30vw;
+  height: 40vh;
+  gap: 0rem; /* Add this to control spacing between wrapped items */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.getInTouch input,
+.getInTouch textarea {
+  width: 100%;
+  padding: 2%;
+  border: 1px solid #646363;
+  margin-bottom: 3%; /* Add this to control spacing between form elements */
+}
+.getInTouch button {
+  padding: 0.5rem 1rem;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.social{
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+.social h1{
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.social ul{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  width: 100%;
+  justify-content: center;
+}
+.social ul li {
+  font-size: 1rem;
+  position: relative;
+  list-style: none;
+  padding: 5%;
+  transition: transform 0.6s ease-in-out;
+}
+.social ul li a {
+  text-decoration: none;
+  color: #000000;
+  box-shadow: #a87a7a 0px 0px 10px;
+}
+.social ul li:hover {
+  transform: scale(2);
+  transition: transform 0.2s ease-out;
+}
+.social ul li a:hover {
+  color: #000000;
+  box-shadow: #000000 0px 0px 20px;
+  cursor: pointer;
+  text-shadow: #000000 0px 0px 10px;
+}
+.social video{
+  width: 80%;
+  height: 60%;
+  position: relative;
+  left: 10%;
+}
+
+.social video:hover{
+  cursor: pointer;
+}
+.social video::-webkit-media-controls{
+  display: none;
+}
+.info-columns{
+  width: 100vw;
+  height: 50vh;
+  background-color: grey;
+}
+.info-columns {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  width: 28%;
+  min-width: 250px;
+}
+
+.column h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 5px;
+}
+
+.column ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column ul li {
+  margin-bottom: 8px;
+  font-size: 1em;
 }
