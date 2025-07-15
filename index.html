@@ -8,41 +8,55 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/scrit.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
   <section id="homePage" class="homePage">
     <img src="asset/bg.png" alt="background" class="bg">
     <header>
-    <nav>
-      <div class="logo">
-        <img src="asset/logo.png" alt="logo">
-      </div>
-      <p>Integrated Hill Area Upliftment Society</p>
-      <div class="navlink">
-        <ul>
-          <li><a href="#homePage">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    </header>
+  <nav>
+    <div class="logo">
+      <img src="asset/logo.png" alt="logo">
+    </div>
+    <p class="title">Integrated Hill Area Upliftment Society</p>
+    <div class="menu-toggle" id="menu-toggle">
+  <span id="menu-icon">☰</span>
+</div>
+    <div class="navlink" id="navlink">
+      <ul>
+        <li><a href="#homePage">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
     <div class="homeContent">
       <div class="homeP">
       <p>
         Ready to start a new chapter? join us in this venture
       </p><a href="#"><button>Learn More</button></a>
       </div>
-    
     <div class="imgContainer">
       <img src="asset/homeImage.jpg" alt="Home Image">
     </div>
     </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("navlink");
+  const icon = document.getElementById("menu-icon");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    icon.textContent = nav.classList.contains("active") ? "✕" : "☰";
+  });
+});
+</script>
   </section>
-  <section id = "about" class="about">
+  <section id = "about" class="about"> 
   <div id="aim" class="founderDetail">
       <div class="img">
       <img src="asset/founder1.png" alt="Founder Image">
@@ -83,7 +97,7 @@
       </ul>
   </div>
   </section>
-  <section class="services" id="services">
+<section class="services" id="services">
     <div class="workDone">
       <h1>WORK DONE</h1>
        <div class="serviceContent">
@@ -99,7 +113,6 @@
         </div>
         </div>
         <div class="service2">
-        
           <div class="service2P">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eius architecto quaerat? Dolorem sint commodi facere incidunt soluta esse aut iure porro aperiam error facilis, explicabo a debitis odit libero.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nihil non cupiditate temporibus similique tempora facilis voluptas recusandae fugit velit deleniti earum commodi quam, dolorem molestiae dolores
@@ -112,7 +125,7 @@
        </div>
     </div>  
   </section>
-  <section id="gallery"class="gallery">
+   <section id="gallery"class="gallery">
      <h1>gallery</h1>
      <div class="gallery-wrapper">
     <button class="nav-button" id="prevBtn" onclick="prevImage()">◀</button>
@@ -156,7 +169,7 @@
     updateGallery();
   </script>
   </section>
-  <section class="contact">
+    <section class="contact">
   <div class="upper">
     <div class="getInTouch">
       <div class="gmail">
@@ -172,11 +185,10 @@
           </form>
           <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
           <script>
-          
-            (function () {
+            (
+              function () {
               emailjs.init("6NMbf23hFLlnvZBSH"); // Replace with your actual public key
             })();
-
             // Handle form submission
             document
               .getElementById("contact-form")
@@ -196,9 +208,7 @@
                   }
                 );
               });
-
           </script>
-  
       </div>
     </div>
     <div class="social">
@@ -236,11 +246,9 @@
       <ul>
         <li>Notification</li>
         <li>Event</li>
-
       </ul>
     </div>
-
-    </div>
+  </div>
   </section>
 </body>
 </html>
