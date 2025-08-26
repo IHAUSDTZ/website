@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IHAUS</title>
     <link rel="stylesheet" href="css/style.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   </head>
   <body>
@@ -34,7 +33,7 @@
   </script>
       </nav>
     </header>
-  <div class="home_content">
+  <div class="home_content" id="homePage">
     <div class="home_image">
       <div>
         <img src="asset/bg.png" alt="">
@@ -53,7 +52,7 @@
       <p>
          Ready to start a new chapter? join us in this venture
       </p>
-      <a href="#"><button>Learn More</button></a>
+      <a href="#about"><button>Learn More</button></a>
     </div>
   </div>
   <div id="about">
@@ -100,7 +99,7 @@
   <div id="services">
     <h1>Some of the work done</h1>
    <div class="work1">
-            <img src="asset/i11.jpg" alt="Sustainable Farming Consultation">
+            <img src="asset/work1image.jpg" alt="Sustainable Farming Consultation">
             <div class="work-content">
                 <h2>Village level Geo-economic Development through Sustainable farming</h2>
                 <p>Score of farmers huddled with experts for a minute deliberation on the topic, "Village level Geo-economic Development through Sustainable farming". The farmers meet was held on 28th April,2025 at the community Hall,Khamlang village,Kamjong district.A good number of farmers attended the meet which began at 11am and lasted for four hours.It was organized and sponsored by Tribal Resource Development Centre in collaboration with Development for rural people supported by Tribal Taste.It was a day long consultative meet where the farmers fraternity shared their ideas,expertise and experiences with one another.</p>
@@ -119,13 +118,11 @@
                 <button class="read-more">Read More</button>
             </div>
         </div>
-        
         <div class="work2">
-            <img src="asset/i4.jpg" alt="Farmers Consultation Program">
+            <img src="asset/work2image.jpg" alt="Farmers Consultation Program">
             <div class="work-content">
                 <h2>A One-Day Farmers’ Consultation Program (Phase-2)</h2>
                 <p>A One-Day Farmers’ Consultation Program (Phase-2) was successfully conducted on 16th April 2025 at Shingkap Community Hall, Kamjong District, Manipur. The program focused on village-level geo-economic development through sustainable farming practices. Shri Athuii Panmei delivered an insightful speech on the health benefits of honey and the potential of beekeeping as a sustainable and profitable profession in Manipur.</p>
-                
                 <div class="work-meta">
                     <div class="date">
                         <i class="far fa-calendar-alt"></i>
@@ -136,12 +133,10 @@
                         <span>Shingkap Community Hall, Kamjong District</span>
                     </div>
                 </div>
-                
                 <button class="read-more">Read More</button>
             </div>
         </div>
     </div>
-
   </div>
   <div id="gallery">
     <h1>Gallery</h1>
@@ -163,51 +158,31 @@
         <div class="description" id="description">Loading description...</div>
     </div>
    <script>
-        const images = [
-            { 
-                src: 'asset/i1.jpg', 
-                desc: 'This is image one.\nA beautiful example of composition.\nClear lighting and contrast.\nIdeal for portfolios.' 
-            },
-            { 
-                src: 'asset/i2.jpg', 
-                desc: 'Second image view.\nUrban landscape in natural tones.\nPerfect balance and shadows.\nModern and minimal.' 
-            },
-            { 
-                src: 'asset/i3.jpg', 
-                desc: 'Indoor atmosphere captured.\nSoft light and warm tones.\nPerfect for cozy themes.\nFeels peaceful and inviting.' 
-            },
-            { 
-                src: 'asset/i4.jpg', 
-                desc: 'Nature at its finest.\nVibrant colors and textures.\nGreat depth of field.\nEvokes a sense of adventure.' 
-            },
-            { 
-                src: 'asset/i5.jpg', 
-                desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
-            },
-              { 
-                src: 'asset/i6.jpg', 
-                desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
-            },
-              { 
-                src: 'asset/i7.jpg', 
-                desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
-            },
-              { 
-                src: 'asset/i8.jpg', 
-                desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
-            },
-              { 
-                src: 'asset/i9.jpg', 
-                desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
-            },
-              { 
-                src: 'asset/i10.jpg', 
-                desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
-            },
-              { 
-                src: 'asset/i11.jpg', 
-                desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
-            }
+       const images = [
+       { 
+           src: 'asset/i1.jpg', 
+           desc: 'This is image one.\nA beautiful example of composition.\nClear lighting and contrast.\nIdeal for portfolios.' 
+       },
+       { 
+           src: 'asset/i2.jpg', 
+           desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
+       },
+         { 
+           src: 'asset/i3.jpg', 
+           desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
+       },
+         { 
+           src: 'asset/i4.jpg', 
+           desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
+       },
+         { 
+           src: 'asset/i5.jpg', 
+           desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
+       },
+         { 
+           src: 'asset/i6.jpg', 
+           desc: 'Final image of the set.\nMinimal background with strong subject.\nHigh clarity.\nIdeal for clean layouts.' 
+       }
         ];
         
         let currentIndex = 0;
@@ -221,11 +196,8 @@
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         
-        // Initialize gallery
         function initGallery() {
             totalImagesElement.textContent = images.length;
-            
-            // Create indicators
             images.forEach((_, index) => {
                 const indicator = document.createElement('div');
                 indicator.classList.add('indicator');
@@ -236,12 +208,8 @@
                 });
                 indicatorsContainer.appendChild(indicator);
             });
-            
-            // Add event listeners to buttons
             prevBtn.addEventListener('click', prevImage);
             nextBtn.addEventListener('click', nextImage);
-            
-            // Add swipe support for touch devices
             let touchStartX = 0;
             let touchEndX = 0;
             
@@ -260,12 +228,10 @@
                 const swipeThreshold = 50;
                 
                 if (touchEndX < touchStartX - swipeThreshold) {
-                    // Swipe left - next image
                     nextImage();
                 }
                 
                 if (touchEndX > touchStartX + swipeThreshold) {
-                    // Swipe right - previous image
                     prevImage();
                 }
             }
@@ -303,8 +269,6 @@
             currentIndex = (currentIndex + 1) % images.length;
             updateGallery();
         }
-        
-        // Initialize the gallery when page loads
         document.addEventListener('DOMContentLoaded', initGallery);
     </script>
   </div>
@@ -323,7 +287,6 @@
                     </form>
                 </div>
             </div>
-            
             <div class="social">
                 <h1>Follow Us</h1>
                 <ul>
@@ -345,7 +308,6 @@
                     <li>Partners & Collaborators</li>
                 </ul>
             </div>
-            
             <div class="column">
                 <h2>OUR WORK</h2>
                 <ul> 
@@ -365,13 +327,11 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function() {
             emailjs.init("6NMbf23hFLlnvZBSH");
         })();
-        
         document.getElementById("contact-form").addEventListener("submit", function(e) {
             e.preventDefault();
             
